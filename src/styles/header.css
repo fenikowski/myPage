@@ -19,7 +19,7 @@ html {
 }
 
 body {
-  min-height: 600vh;
+  /* min-height: 600vh; */
   width: 100%;
   overflow: hidden;
   font-family: "Barlow Condensed";

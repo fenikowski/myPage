@@ -23,6 +23,12 @@ class InitialHeader extends React.Component {
   };
 
   componentDidMount = () => {
+    document
+      .querySelectorAll("nav.main-navigation a")
+      .forEach(a => (a.style.color = "black"));
+    document.querySelector("nav.main-navigation div.shadow").style.boxShadow =
+      "0 0 10vh 2vh white";
+
     this.setState({
       bgc1: "0px",
       bgc2: "77px",
@@ -103,6 +109,14 @@ class HeaderGames extends React.Component {
   state = {
     backgroundImage: gif1
   };
+
+  componentDidMount() {
+    document
+      .querySelectorAll("nav.main-navigation a")
+      .forEach(a => (a.style.color = "white"));
+    document.querySelector("nav.main-navigation div.shadow").style.boxShadow =
+      "none";
+  }
 
   fire = e => {
     if (this.state.backgroundImage === gif1) {
