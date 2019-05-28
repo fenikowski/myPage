@@ -16,10 +16,10 @@ class Scroll extends React.Component {
   handleScroll = () => {
     // // here needed maximum value for scrollY
 
-    let position = window.scrollY / 3772;
+    let position = window.scrollY / document.body.offsetHeight;
     this.setState({
       scroll: `${window.innerHeight}px`,
-      holder: `${position * 100 > 93 ? 93 : position * 100}%`
+      holder: `${position * 100}%`
     });
   };
 

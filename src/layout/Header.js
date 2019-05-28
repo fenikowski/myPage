@@ -7,6 +7,7 @@ import bgc4 from "../img/bgc4.png";
 import bgc5 from "../img/bgc5.png";
 import gif1 from "../img/gif1.gif";
 import gif2 from "../img/gif2.gif";
+import bgcAbilities from "../img/examplePhoto.jpg";
 import { Switch, Route } from "react-router";
 import "./funcionality";
 
@@ -136,10 +137,64 @@ class HeaderGames extends React.Component {
         <div className="background-games" onClick={this.fire}>
           <img src={this.state.backgroundImage} alt="" />
         </div>
-        <h1 className="name juegos">Juegos</h1>
-        <h2 className="specialty juegos">
-          ¡Haz click para despertar el fuego!
+        <h1 className="name juegos" onClick={this.fire}>
+          Juegos
+        </h1>
+        <h2 className="specialty juegos" onClick={this.fire}>
+          ¡Haz <span>click</span> para despertar el fuego!
         </h2>
+      </>
+    );
+  }
+}
+
+class HeaderHabilidades extends React.Component {
+  state = {
+    backgroundImage: bgcAbilities
+  };
+
+  componentDidMount() {
+    document
+      .querySelectorAll("nav.main-navigation a")
+      .forEach(a => (a.style.color = "black"));
+    document.querySelector("nav.main-navigation div.shadow").style.boxShadow =
+      "0 0 10vh 2vh white";
+  }
+
+  render() {
+    return (
+      <>
+        <div className="background-abilities">
+          <img src={this.state.backgroundImage} alt="" />
+        </div>
+        <h1 className="name">Habilidades</h1>
+        <h2 className="specialty">Una inscripción ejemplaria</h2>
+      </>
+    );
+  }
+}
+
+class HeaderContact extends React.Component {
+  state = {
+    backgroundImage: bgcAbilities
+  };
+
+  componentDidMount() {
+    document
+      .querySelectorAll("nav.main-navigation a")
+      .forEach(a => (a.style.color = "black"));
+    document.querySelector("nav.main-navigation div.shadow").style.boxShadow =
+      "0 0 10vh 2vh white";
+  }
+
+  render() {
+    return (
+      <>
+        <div className="background-contact">
+          <img src={this.state.backgroundImage} alt="" />
+        </div>
+        <h1 className="name">Contact</h1>
+        <h2 className="specialty">Una inscripción ejemplaria</h2>
       </>
     );
   }
@@ -151,6 +206,8 @@ const Header = props => {
       <Switch>
         <Route path="/" exact component={InitialHeader} />
         <Route path="/juegos" component={HeaderGames} />
+        <Route path="/habilidades" component={HeaderHabilidades} />
+        <Route path="/contact" component={HeaderContact} />
       </Switch>
     </>
   );

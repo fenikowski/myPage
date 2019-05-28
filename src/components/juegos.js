@@ -43,13 +43,17 @@ const Juegos = props => {
               <p>
                 El juego está escrito por mi (Igor Fenikowski), sin embargo
                 contiene imagenes y sonidos de licencia 'open source'. El uso no
-                es comercial, pero se admite gratuito para cada uso personal.
+                es comercial, pero se admite gratuito para cualquier uso
+                personal.
               </p>
             </div>
             <div>
               <img src={GitHubLogo} alt="github logo" />
               <p>
-                El codigo disponible en <a href="github.com">GitHub</a>
+                El código disponible en{" "}
+                <a href="https://github.com/fenikowski/SuperPotatoBros">
+                  GitHub
+                </a>
               </p>
             </div>
           </div>
@@ -85,13 +89,15 @@ const Juegos = props => {
               <p>
                 El juego está escrito por mi (Igor Fenikowski), sin embargo
                 contiene imagenes y sonidos de licencia 'open source'. El uso no
-                es comercial, pero se admite gratuito para cada uso personal.
+                es comercial, pero se admite gratuito para cualquier uso
+                personal.
               </p>
             </div>
             <div>
               <img src={GitHubLogo} alt="github logo" />
               <p>
-                El codigo disponible en <a href="github.com">GitHub</a>
+                El código disponible en{" "}
+                <a href="https://github.com/fenikowski/snake">GitHub</a>
               </p>
             </div>
           </div>
@@ -125,13 +131,15 @@ const Juegos = props => {
               <p>
                 El juego está escrito por mi (Igor Fenikowski), sin embargo
                 contiene imagenes y sonidos de licencia 'open source'. El uso no
-                es comercial, pero se admite gratuito para cada uso personal.
+                es comercial, pero se admite gratuito para cualquier uso
+                personal.
               </p>
             </div>
             <div>
               <img src={GitHubLogo} alt="github logo" />
               <p>
-                El codigo disponible en <a href="github.com">GitHub</a>
+                El código disponible en{" "}
+                <a href="https://github.com/fenikowski/TicTacToe">GitHub</a>
               </p>
             </div>
           </div>

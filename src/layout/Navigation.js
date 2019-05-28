@@ -13,8 +13,8 @@ const Navigation = props => {
     },
     {
       id: 1,
-      name: "Projectos",
-      path: "/projectos"
+      name: "Habilidades",
+      path: "/habilidades"
     },
     {
       id: 2,
