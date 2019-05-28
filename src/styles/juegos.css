@@ -1,0 +1,102 @@
+div.gamePage {
+  height: 100%;
+  width: 100%;
+  background-image: url(../img/stars.gif);
+  margin-top: -40px;
+}
+
+section.juegos {
+  position: relative;
+  width: 80%;
+  top: -100px;
+  /* left: 10%; */
+  min-height: 100vh;
+  margin: 0 auto 100px;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 10px 2px black;
+  border-radius: 5px;
+  /* transform: translate(0, -100px); */
+  z-index: 1;
+}
+
+section.juegos div.description {
+  padding: 20px;
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  right: 1000px;
+  border: 2px black solid;
+}
+
+section.juegos div.description h3 {
+  font-weight: 600;
+}
+section.juegos div.description p {
+  margin-top: 20px;
+  font-weight: 300;
+}
+
+section.juegos h2 {
+  font-size: 100px;
+  text-align: center;
+}
+
+section.juegos div.gameImage {
+  position: absolute;
+  top: 20%;
+  height: 50%;
+  width: 50%;
+  background-image: url(../img/game3off.gif);
+  background-size: cover;
+  background-position: center;
+  border: black 5px solid;
+}
+
+section.juegos div.gameImage:hover {
+  background-image: url(../img/game3on.gif);
+  cursor: pointer;
+}
+
+section.juegos:nth-child(2) div.gameImage {
+  background-image: url(../img/game2off.gif);
+}
+
+section.juegos:nth-child(2) div.gameImage:hover {
+  background-image: url(../img/game2on.gif);
+  cursor: pointer;
+}
+section.juegos:nth-child(3) div.gameImage {
+  background-image: url(../img/game1off.gif);
+}
+
+section.juegos:nth-child(3) div.gameImage:hover {
+  background-image: url(../img/game1on.gif);
+  cursor: pointer;
+}
+
+section.juegos div.gameInfo {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 25%;
+  width: 100%;
+  /* background-color: #222; */
+  /* border: black 1px solid; */
+}
+
+section.juegos div.gameInfo div {
+  flex-grow: 1;
+  /* background-color: #555; */
+  border-right: 1px black solid;
+  border-left: 1px black solid;
+}
+
+section.juegos div.gameInfo div:nth-child(1) {
+  border-left: none;
+}
+section.juegos div.gameInfo div:nth-child(4) {
+  border-right: none;
+}

@@ -1,0 +1,63 @@
+nav.main-navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  height: 7vh;
+  width: 100%;
+  text-align: right;
+}
+
+.main-navigation div.shadow {
+  display: inline-block;
+  margin-right: 3vw;
+  width: 35%;
+  box-shadow: 0 0 10vh 2vh white;
+}
+
+.main-navigation ul {
+  height: 100%;
+  width: 100%;
+  list-style: none;
+  text-align: right;
+}
+
+.main-navigation ul li {
+  display: inline-block;
+  height: 100%;
+  font-size: 24px;
+  color: block;
+  margin-right: 5vw;
+}
+
+.main-navigation ul li a {
+  text-decoration: none;
+  color: black;
+  transition: 0.2s;
+}
+
+.main-navigation ul li a.active {
+  border-bottom: white solid 2px;
+}
+
+/* scroll */
+
+div.scroll {
+  position: fixed;
+  top: 0;
+  right: 5px;
+  width: 3px;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 9999;
+}
+
+div.holder {
+  position: absolute;
+  top: 10px;
+  left: -2px;
+  height: 50px;
+  width: 7px;
+  widows: 6px;
+  background-color: lightgrey;
+  border-radius: 3px;
+}

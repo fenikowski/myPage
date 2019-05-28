@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css?family=Barlow+Condensed:300,400,600,700&display=swap&subset=latin-ext");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0px; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #ff0000;
+}
+
+body {
+  min-height: 600vh;
+  width: 100%;
+  overflow: hidden;
+  font-family: "Barlow Condensed";
+}
+
+#main-navigation {
+  position: fixed;
+  z-index: 20;
+  height: 7vh;
+  width: 100%;
+  text-align: right;
+}
+
+#main-navigation div.shadow {
+  display: inline-block;
+  margin-right: 3vw;
+  width: 30%;
+  box-shadow: 0 0 10vh 1vh white;
+}
+
+#main-navigation ul {
+  height: 100%;
+  width: 100%;
+  list-style: none;
+  text-align: right;
+}
+
+#main-navigation ul li {
+  display: inline-block;
+  height: 100%;
+  font-size: 24px;
+  color: block;
+  margin-right: 5vw;
+}
+
+div.background-wrapper {
+  width: 1536px;
+  height: 900px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 5px solid black;
+}
+
+h1 {
+  position: absolute;
+  z-index: 4;
+  text-transform: uppercase;
+  font-size: 130px;
+  top: 170px;
+  left: -850px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  /* docelowa pozycja to left 40px */
+  animation: animationh1 60s 1 forwards linear;
+  /* cubic-bezier(0, 1.84, 0.41, 0.8) */
+  text-shadow: 4px 2px lightgray;
+  color: white;
+  white-space: nowrap;
+}
+
+@keyframes animationh1 {
+  0% {
+    left: -850px;
+  }
+  1% {
+    left: 30px;
+  }
+  10% {
+    left: 90px;
+  }
+  25% {
+    left: 150px;
+  }
+  65% {
+    left: 60px;
+  }
+  100% {
+    left: 120px;
+  }
+}
+
+h2 {
+  position: absolute;
+  z-index: 6;
+  text-transform: uppercase;
+  font-size: 80px;
+  top: 323px;
+  left: 207px;
+  font-weight: 500;
+  animation: animationh2 60s 1 forwards linear;
+  line-break: loose;
+  /* docelowa pozycja to left 300px */
+  text-shadow: 2px 1px lightgray;
+  color: white;
+  white-space: nowrap;
+}
+
+@keyframes animationh2 {
+  0% {
+    left: 1500px;
+  }
+
+  1% {
+    left: 360px;
+  }
+  10% {
+    left: 300px;
+  }
+  25% {
+    left: 240px;
+  }
+  65% {
+    left: 330px;
+  }
+  100% {
+    left: 270px;
+  }
+}
+
+#bgc1 {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+#bgc2 {
+  width: 100%;
+  position: absolute;
+  left: -43px;
+  top: 77px;
+  z-index: 3;
+}
+
+#bgc3 {
+  width: 100%;
+  position: absolute;
+  left: -23px;
+  top: 270px;
+  z-index: 5;
+}
+
+#bgc4 {
+  width: 100%;
+  position: absolute;
+  left: -19px;
+  top: 269px;
+  z-index: 7;
+}
+
+#bgc5 {
+  width: 100%;
+  position: absolute;
+  left: 11px;
+  top: 243px;
+  z-index: 9;
+}
