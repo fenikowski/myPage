@@ -10,6 +10,7 @@ const Juegos = props => {
     <>
       <div className="gamePage">
         <section className="juegos">
+          <div className="gradient-juegos" />
           {/* <h2>Super Potato Bros</h2> */}
           <div className="description">
             <h3>
@@ -31,8 +32,8 @@ const Juegos = props => {
             <div>
               <img src={JavaScriptLogo} alt="javascript logo" />
               <p>
-                El juego está escrito en puro JavaScript (ES6), además se basa
-                por primera vez en programación de objetos.
+                El juego se basa en programación de objetos en puro JavaScript
+                (ES6)
               </p>
             </div>
             <div>
@@ -60,6 +61,7 @@ const Juegos = props => {
         </section>
         <section className="juegos">
           {/* <h2>Snake</h2> */}
+          <div className="gradient-juegos" />
           <div className="description">
             <h3>
               Siguiente clásico, un recurdo de infancia y la famosa Nokia 6310i.
@@ -103,6 +105,7 @@ const Juegos = props => {
           </div>
         </section>
         <section className="juegos">
+          <div className="gradient-juegos" />
           {/* <h2>Super Potato Bros</h2> */}
           <div className="description">
             <h3>Mi primera obra del arte de programación.</h3>

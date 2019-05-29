@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:300,400,600&display=swap&subset=latin-ext");
+
 div.gamePage {
   height: 100%;
   width: 100%;
   background-image: url(../img/stars.gif);
   margin-top: -40px;
+  font-family: "Ubuntu";
 }
 
 section.juegos {
@@ -10,33 +13,51 @@ section.juegos {
   width: 80%;
   top: -100px;
   /* left: 10%; */
-  min-height: 160vh;
+  min-height: 90vh;
   margin: 0 auto 100px;
-  background-color: rgb(41, 46, 51);
-  color: lightcyan;
+  background-color: #34353e;
+  color: rgb(192, 194, 233);
+  text-shadow: 1px 0 2px black;
   box-shadow: 0 0 10px 2px black;
   border-radius: 25px;
   /* transform: translate(0, -100px); */
   z-index: 1;
+  overflow: hidden;
+}
+
+div.gradient-juegos {
+  height: 90vh;
+  width: 100%;
+  background-image: linear-gradient(
+    to left,
+    #000000,
+    #222222,
+    #3e3e3e,
+    #5d5d5d,
+    #7d7d7d
+  );
+  opacity: 0.2;
 }
 
 section.juegos div.description {
-  padding: 20px;
-  width: 80%;
-  height: 20%;
+  /* padding: 20px; */
+  width: 40%;
+  height: 45%;
   position: absolute;
-  left: 10%;
-  top: 55%;
+  left: 55%;
+  top: 5%;
   right: 1000px;
   /* border: 2px black solid; */
 }
 
 section.juegos div.description h3 {
+  font-size: 24px;
   font-weight: 600;
 }
 section.juegos div.description p {
+  font-size: 20px;
   margin-top: 20px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 section.juegos h2 {
@@ -48,14 +69,15 @@ section.juegos div.gameImage {
   position: absolute;
   top: 5%;
   height: 45%;
-  width: 70%;
-  left: 50%;
-  transform: translate(-50%, 0);
+  width: 40%;
+  left: 5%;
+  /* transform: translate(-50%, 0); */
   background-image: url(../img/game3off.gif);
   background-size: cover;
   background-position: center;
-  /* border: black 5px solid; */
-  box-shadow: 0 10px 10px 5px grey;
+  /* border: lightslategrey 5px solid; */
+  border-radius: 10px;
+  box-shadow: 2px 6px 12px 4px rgb(43, 42, 42);
 }
 
 section.juegos div.gameImage:hover {
@@ -85,7 +107,7 @@ section.juegos div.gameInfo {
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 20%;
+  height: 30%;
   width: 100%;
 }
 
@@ -94,6 +116,7 @@ section.juegos div.gameInfo div {
   text-align: center;
   overflow: hidden;
   font-weight: 300;
+  font-size: 16px;
   border-right: 1px grey solid;
   border-left: 1px grey solid;
 }

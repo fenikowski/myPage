@@ -8,7 +8,7 @@ class Introduction extends React.Component {
   recién graduado de la Universidad de Varsovia. Me dedico a creación de
   aplicaciones de web usando las tecnologías nuevas y frameworks
   populares. En está página encontrarás informaciones sobre mi, mis
-  habilidades y juegos, así mismo podrás contactarte conmigo y revisar
+  habilidades y juegos, así mismo podrás ponerte en contacto conmigo y revisar
   mi código. Me alegra que decidste echar una vista aquí. `,
     activeLetter: -15,
     photoClass: "",
