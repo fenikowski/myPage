@@ -3,7 +3,8 @@
 div.gamePage {
   height: 100%;
   width: 100%;
-  background-image: url(../img/stars.gif);
+  /* background-image: url(../img/stars.gif); */
+  background-color: #2d2d35;
   margin-top: -40px;
   font-family: "Ubuntu";
 }
@@ -18,7 +19,7 @@ section.juegos {
   background-color: #34353e;
   color: rgb(192, 194, 233);
   text-shadow: 1px 0 2px black;
-  box-shadow: 0 0 10px 2px black;
+  box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.658);
   border-radius: 25px;
   /* transform: translate(0, -100px); */
   z-index: 1;
@@ -41,13 +42,14 @@ div.gradient-juegos {
 
 section.juegos div.description {
   /* padding: 20px; */
+  /* padding-left: 10px; */
   width: 40%;
   height: 45%;
   position: absolute;
   left: 55%;
   top: 5%;
   right: 1000px;
-  /* border: 2px black solid; */
+  /* border-left: 2px solid grey; */
 }
 
 section.juegos div.description h3 {
@@ -77,7 +79,7 @@ section.juegos div.gameImage {
   background-position: center;
   /* border: lightslategrey 5px solid; */
   border-radius: 10px;
-  box-shadow: 2px 6px 12px 4px rgb(43, 42, 42);
+  box-shadow: 0px 0px 0px 6px #34353e, 0px 0px 0px 8px grey;
 }
 
 section.juegos div.gameImage:hover {

@@ -1,15 +1,11 @@
 import React from "react";
 import "../styles/introduction.css";
+import Data from "../text";
 
 class Introduction extends React.Component {
   state = {
     passedText: "",
-    text: `¡Hola, bienvenidos a mi página! Soy Igor Fenikowski, un estudiante
-  recién graduado de la Universidad de Varsovia. Me dedico a creación de
-  aplicaciones de web usando las tecnologías nuevas y frameworks
-  populares. En está página encontrarás informaciones sobre mi, mis
-  habilidades y juegos, así mismo podrás ponerte en contacto conmigo y revisar
-  mi código. Me alegra que decidste echar una vista aquí. `,
+    text: "",
     activeLetter: -15,
     photoClass: "",
     cursorClass: ""
@@ -21,12 +17,17 @@ class Introduction extends React.Component {
   }
 
   addLetter = () => {
-    // Użyj w środku setTimeout
-    if (this.state.activeLetter < this.state.text.length) {
+    let text = "";
+    if (this.props.language === "es") {
+      text = Data.es.introduction.text;
+    } else if (this.props.language === "en") {
+      text = Data.en.introduction.text;
+    }
+
+    if (this.state.activeLetter < text.length) {
       if (this.state.activeLetter >= 0) {
         this.setState(prevState => ({
-          passedText:
-            prevState.passedText + prevState.text[prevState.activeLetter]
+          passedText: prevState.passedText + text[prevState.activeLetter]
         }));
       }
       this.setState(prevState => ({

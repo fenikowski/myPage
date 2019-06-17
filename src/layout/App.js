@@ -10,14 +10,34 @@ import "../styles/App.css";
 // import "simplebar/dist/simplebar.css";
 
 class App extends React.Component {
-  state = {};
+  state = {
+    language: "es"
+  };
+
+  handleClickEnglish = () => {
+    this.setState({
+      language: "en"
+    });
+  };
+  handleClickSpanish = () => {
+    this.setState({
+      language: "es"
+    });
+  };
+
   render() {
     return (
       <>
         <Router>
-          <Navigation />
-          <Header />
-          <Page />
+          <button className="language" onClick={this.handleClickEnglish}>
+            english
+          </button>
+          <button className="language" onClick={this.handleClickSpanish}>
+            spanish
+          </button>
+          <Navigation language={this.state.language} />
+          <Header language={this.state.language} />
+          <Page language={this.state.language} />
         </Router>
       </>
     );

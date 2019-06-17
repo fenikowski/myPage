@@ -7,9 +7,16 @@ const Page = props => {
   return (
     <div className="page">
       <Switch>
-        <Route path="/" exact component={Introduction} />
+        <Route
+          path="/"
+          exact
+          render={() => <Introduction language={props.language} />}
+        />
         <Route path="/projectos" render={() => <p>estoy en vocabulario</p>} />
-        <Route path="/juegos" component={Juegos} />
+        <Route
+          path="/juegos"
+          render={() => <Juegos language={props.language} />}
+        />
         <Route path="/contact" render={() => <p>estoy en peliculas</p>} />
         <Route render={() => <p>Error 404</p>} />
       </Switch>

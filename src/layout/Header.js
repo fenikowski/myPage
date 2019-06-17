@@ -10,6 +10,7 @@ import gif2 from "../img/gif2.gif";
 import bgcAbilities from "../img/examplePhoto.jpg";
 import { Switch, Route } from "react-router";
 import "./funcionality";
+import Data from "../text";
 
 class InitialHeader extends React.Component {
   state = {
@@ -132,16 +133,22 @@ class HeaderGames extends React.Component {
   };
 
   render() {
+    let titles = "";
+    if (this.props.language === "es") {
+      titles = Data.es.headers;
+    } else if (this.props.language === "en") {
+      titles = Data.en.headers;
+    }
     return (
       <>
         <div className="background-games" onClick={this.fire}>
           <img src={this.state.backgroundImage} alt="" />
         </div>
         <h1 className="name juegos" onClick={this.fire}>
-          Juegos
+          {titles.gamesh1}
         </h1>
         <h2 className="specialty juegos" onClick={this.fire}>
-          ¡Haz <span>click</span> para despertar el fuego!
+          {titles.gamesh2}
         </h2>
       </>
     );
@@ -205,7 +212,10 @@ const Header = props => {
     <>
       <Switch>
         <Route path="/" exact component={InitialHeader} />
-        <Route path="/juegos" component={HeaderGames} />
+        <Route
+          path="/juegos"
+          render={() => <HeaderGames language={props.language} />}
+        />
         <Route path="/habilidades" component={HeaderHabilidades} />
         <Route path="/contact" component={HeaderContact} />
       </Switch>

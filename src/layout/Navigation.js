@@ -2,28 +2,36 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "../styles/nav.css";
 import Scroll from "../components/scroll.js";
+import Data from "../text";
 
 const Navigation = props => {
+  let titles = "";
+  if (props.language === "es") {
+    titles = Data.es.navigation;
+  } else if (props.language === "en") {
+    titles = Data.en.navigation;
+  }
+
   const navList = [
     {
       id: 0,
-      name: "Inicio",
+      name: titles.start,
       path: "/",
       exact: true
     },
     {
       id: 1,
-      name: "Habilidades",
+      name: titles.skills,
       path: "/habilidades"
     },
     {
       id: 2,
-      name: "Juegos",
+      name: titles.games,
       path: "/juegos"
     },
     {
       id: 3,
-      name: "Contact",
+      name: titles.contact,
       path: "/contact"
     }
   ];

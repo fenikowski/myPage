@@ -61,3 +61,32 @@ div.holder {
   background-color: lightgrey;
   border-radius: 3px;
 }
+
+/* div.navCube {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  transform-style: preserve-3d;
+  transform: translateZ(50%);
+  transition: 1s;
+}
+
+div.navCube:hover {
+  transform: translateZ(-100px) rotateX(-90deg);
+}
+
+div.navCube div {
+  position: absolute;
+  top: 0;
+  left: 0;
+} */
+
+/* div.cube-front {
+  transform: rotateY(0deg) translateZ(50%);
+}
+
+div.cube-top {
+  transform: rotateX(90deg) translateZ(50%);
+} */
