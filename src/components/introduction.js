@@ -16,6 +16,10 @@ class Introduction extends React.Component {
     this.cursorAnimation();
   }
 
+  componentWillUnmount = () => {
+    window.removeEventListener("scroll", this.handleScroll);
+  };
+
   addLetter = () => {
     let text = "";
     if (this.props.language === "es") {
@@ -44,12 +48,23 @@ class Introduction extends React.Component {
       this.setState({
         photoClass: "active-profile-photo"
       });
+
+      // border div
+
+      document
+        .querySelectorAll("div.border div")
+        .forEach(div => div.classList.add("active"));
     } else if (window.scrollY < 1000) {
       this.setState({
         activeLetter: -15,
         photoClass: "",
         passedText: ""
       });
+      // border div
+
+      document
+        .querySelectorAll("div.border div")
+        .forEach(div => div.classList.remove("active"));
     }
   };
 
@@ -70,6 +85,13 @@ class Introduction extends React.Component {
     return (
       <>
         <section className="introduction">
+          <div className="border">
+            <div className="initial" />
+            <div className="top1" />
+            <div className="top2" />
+            <div className="left" />
+            <div className="right" />
+          </div>
           <div className={`profile-photo ${this.state.photoClass}`} />
           <div className="description">
             <p>

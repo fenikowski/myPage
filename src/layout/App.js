@@ -29,12 +29,8 @@ class App extends React.Component {
     return (
       <>
         <Router>
-          <button className="language" onClick={this.handleClickEnglish}>
-            english
-          </button>
-          <button className="language" onClick={this.handleClickSpanish}>
-            spanish
-          </button>
+          <button className="language US" onClick={this.handleClickEnglish} />
+          <button className="language ES" onClick={this.handleClickSpanish} />
           <Navigation language={this.state.language} />
           <Header language={this.state.language} />
           <Page language={this.state.language} />

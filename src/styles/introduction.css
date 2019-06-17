@@ -11,7 +11,7 @@ div.profile-photo {
   left: 150px;
   height: 400px;
   width: 400px;
-  box-shadow: 0 0 0 7px white, 0 0 0 14px grey;
+  box-shadow: 0 0 0 7px white, 0 0 0 14px lime;
   border-radius: 200px;
   background-image: url(../img/20190130_225004.jpg);
   background-size: cover;
@@ -27,13 +27,13 @@ div.active-profile-photo {
 
 @keyframes profilePhotoAnimation {
   0% {
-    box-shadow: 0 0 0 7px white, 0 0 0 14px grey;
+    box-shadow: 0 0 0 7px white, 0 0 0 14px lime;
   }
   50% {
-    box-shadow: 0 0 0 20px white, 0 0 0 33px grey;
+    box-shadow: 0 0 0 20px white, 0 0 0 33px lime;
   }
   100% {
-    box-shadow: 0 0 0 7px white, 0 0 0 14px grey;
+    box-shadow: 0 0 0 7px white, 0 0 0 14px lime;
   }
 }
 
@@ -44,9 +44,6 @@ div.description {
   left: 700px;
   top: 200px;
   font-size: 26px;
-}
-
-div.description {
   line-height: 1.4;
 }
 
@@ -67,4 +64,92 @@ section.about-me {
   width: 100%;
   background-color: #000;
   /* border: 5px green solid; */
+}
+
+/* border */
+
+div.border {
+  position: absolute;
+  top: 5%;
+  left: 2.5%;
+  height: 150vh;
+  width: 95%;
+  border: lime solid 4px;
+  border-radius: 4px;
+}
+
+div.border div.initial {
+  position: absolute;
+  width: 4px;
+  height: 10%;
+  top: -20%;
+  background-color: lime;
+  left: 50%;
+  transition: 1s;
+}
+
+div.border div.top1 {
+  position: absolute;
+  width: 50%;
+  height: 10px;
+  top: -5px;
+  left: 0;
+  /* transform: translate(-50%, 0); */
+  background-color: #fff;
+  /* border: black solid 1px; */
+  transition: 2s;
+  transition-delay: 1s;
+}
+div.border div.top2 {
+  position: absolute;
+  width: 50%;
+  height: 10px;
+  top: -5px;
+  left: 50%;
+  /* transform: translate(-50%, 0); */
+  background-color: #fff;
+  /* border: black solid 1px; */
+  transition: 2s;
+  transition-delay: 1s;
+}
+div.border div.left {
+  position: absolute;
+  width: 10px;
+  height: 100%;
+  top: -5px;
+  left: -5px;
+  /* transform: translate(-50%, 0); */
+  background-color: #fff;
+  /* border: black solid 1px; */
+  transition: 2s;
+  transition-delay: 1.5s;
+}
+div.border div.right {
+  position: absolute;
+  width: 10px;
+  height: 100%;
+  top: -5px;
+  right: -5px;
+  /* transform: translate(-50%, 0); */
+  background-color: #fff;
+  /* border: black solid 1px; */
+  transition: 2s;
+  transition-delay: 1.5s;
+}
+
+div.border div.top1.active {
+  left: -100%;
+}
+
+div.border div.top2.active {
+  left: 150%;
+}
+
+div.border div.left.active,
+div.border div.right.active {
+  top: 105%;
+}
+
+div.border div.initial.active {
+  top: -10%;
 }
