@@ -8,6 +8,7 @@
     "react-router": "^5.0.0",
     "react-router-dom": "^5.0.0",
     "react-scripts": "3.0.1",
+    "set-default-browser": "^1.0.1",
     "simplebar": "^4.0.0"
   },
   "scripts": {

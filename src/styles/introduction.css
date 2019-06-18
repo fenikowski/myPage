@@ -11,7 +11,7 @@ div.profile-photo {
   left: 150px;
   height: 400px;
   width: 400px;
-  box-shadow: 0 0 0 7px white, 0 0 0 14px lime;
+  box-shadow: 0 0 0 7px white, 0 0 0 14px lightgray;
   border-radius: 200px;
   background-image: url(../img/20190130_225004.jpg);
   background-size: cover;
@@ -27,13 +27,13 @@ div.active-profile-photo {
 
 @keyframes profilePhotoAnimation {
   0% {
-    box-shadow: 0 0 0 7px white, 0 0 0 14px lime;
+    box-shadow: 0 0 0 7px white, 0 0 0 14px lightgray;
   }
   50% {
-    box-shadow: 0 0 0 20px white, 0 0 0 33px lime;
+    box-shadow: 0 0 0 20px white, 0 0 0 33px lightgray;
   }
   100% {
-    box-shadow: 0 0 0 7px white, 0 0 0 14px lime;
+    box-shadow: 0 0 0 7px white, 0 0 0 14px lightgray;
   }
 }
 
@@ -56,33 +56,26 @@ span.cursor.active {
   opacity: 1;
 }
 
-/* introduction part 2 */
-
-section.about-me {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  background-color: #000;
-  /* border: 5px green solid; */
-}
-
 /* border */
 
 div.border {
   position: absolute;
   top: 5%;
   left: 2.5%;
-  height: 150vh;
+  height: 200vh;
   width: 95%;
   border: lime solid 4px;
+  border-bottom: none;
   border-radius: 4px;
+  z-index: 5;
+  opacity: 0.3;
 }
 
 div.border div.initial {
   position: absolute;
   width: 4px;
   height: 10%;
-  top: -20%;
+  top: -15%;
   background-color: lime;
   left: 50%;
   transition: 1s;
@@ -121,8 +114,7 @@ div.border div.left {
   /* transform: translate(-50%, 0); */
   background-color: #fff;
   /* border: black solid 1px; */
-  transition: 2s;
-  transition-delay: 1.5s;
+  transition: top 2s 1.5s, opacity 0s 3.5s;
 }
 div.border div.right {
   position: absolute;
@@ -133,8 +125,7 @@ div.border div.right {
   /* transform: translate(-50%, 0); */
   background-color: #fff;
   /* border: black solid 1px; */
-  transition: 2s;
-  transition-delay: 1.5s;
+  transition: top 2s 1.5s, opacity 0s 3.5s;
 }
 
 div.border div.top1.active {
@@ -148,8 +139,125 @@ div.border div.top2.active {
 div.border div.left.active,
 div.border div.right.active {
   top: 105%;
+  opacity: 0;
 }
 
 div.border div.initial.active {
   top: -10%;
+}
+
+/* introduction part 2 */
+
+section.about-me {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: #000;
+  /* border: 5px green solid; */
+}
+
+div.cubesHolder {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 90%;
+  margin-left: 2.5%;
+}
+
+/* cube */
+.scene {
+  width: 180px;
+  height: 180px;
+  border: 1px solid #ccc;
+  margin: 80px;
+  perspective: 400px;
+}
+
+.cube {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: translateZ(-100px);
+  transition: transform 0.5s;
+}
+
+.cube.show-front {
+  transform: translateZ(-100px) rotateY(0deg);
+}
+.cube.show-right {
+  transform: translateZ(-100px) rotateY(-90deg);
+}
+.cube.show-back {
+  transform: translateZ(-100px) rotateY(-180deg);
+}
+.cube.show-left {
+  transform: translateZ(-100px) rotateY(90deg);
+}
+.cube.show-top {
+  transform: translateZ(-100px) rotateX(-90deg);
+}
+.cube.show-bottom {
+  transform: translateZ(-100px) rotateX(90deg);
+}
+
+.cube__face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 2px solid lightgrey;
+  line-height: 200px;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.cube__face--front {
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.cube__face--front img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80%;
+}
+
+.cube__face--right {
+  background: rgba(0, 0, 0, 0.85);
+}
+.cube__face--back {
+  background: rgba(0, 0, 0, 0.85);
+}
+.cube__face--left {
+  background: rgba(0, 0, 0, 0.85);
+}
+.cube__face--top {
+  background: rgba(0, 0, 0, 0.85);
+}
+.cube__face--bottom {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.cube__face--front {
+  transform: rotateY(0deg) translateZ(100px);
+}
+.cube__face--right {
+  transform: rotateY(90deg) translateZ(100px);
+}
+.cube__face--back {
+  transform: rotateY(180deg) translateZ(100px);
+}
+.cube__face--left {
+  transform: rotateY(-90deg) translateZ(100px);
+}
+.cube__face--top {
+  transform: rotateX(90deg) translateZ(100px);
+}
+.cube__face--bottom {
+  transform: rotateX(-90deg) translateZ(100px);
 }

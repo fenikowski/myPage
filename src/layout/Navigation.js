@@ -46,7 +46,7 @@ const Navigation = props => {
 
   return (
     <>
-      <Scroll />
+      {/* <Scroll /> */}
       <nav className="main-navigation">
         <div className="shadow" />
         <ul className="navigation">{list}</ul>
