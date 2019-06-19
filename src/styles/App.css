@@ -44,7 +44,7 @@ button.language {
 
 button.language:hover {
   cursor: pointer;
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0), 0 0 0 2px white;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0), 0 0 0 3px white;
 }
 
 button.language:focus {

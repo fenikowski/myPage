@@ -2,13 +2,14 @@ import React from "react";
 import "../styles/introduction.css";
 import Data from "../text";
 import JavaScriptLogo from "../img/javaScriptLogo.png";
-import HTMLLogo from "../img/HTMLLogo.png";
-import CSSLogo from "../img/CSSLogo.png";
+import ReduxLogo from "../img/ReduxLogo.png";
+import GimpLogo from "../img/GimpLogo.png";
 import ReactLogo from "../img/ReactLogo.png";
 import NativeLogo from "../img/NativeLogo.jpg";
 import GitLogo from "../img/GitLogo.png";
 import NodeLogo from "../img/NodeLogo.png";
 import MongoLogo from "../img/MongoLogo.png";
+import Map from "../img/map.PNG";
 
 class Introduction extends React.Component {
   state = {
@@ -52,7 +53,7 @@ class Introduction extends React.Component {
   };
 
   handleScroll = () => {
-    if (window.scrollY > 500 && this.state.photoClass === "") {
+    if (window.scrollY > 350 && this.state.photoClass === "") {
       this.addLetter();
       this.setState({
         photoClass: "active-profile-photo"
@@ -69,14 +70,12 @@ class Introduction extends React.Component {
         photoClass: "",
         passedText: ""
       });
-      // border div
-
-      // document
-      //   .querySelectorAll("div.border div")
-      //   .forEach(div => div.classList.remove("active"));
     }
     if (window.scrollY > 1600) {
       this.cubeRotation();
+    }
+    if (window.scrollY > 2400) {
+      this.mapAnimation();
     }
   };
 
@@ -149,6 +148,11 @@ class Introduction extends React.Component {
     });
   };
 
+  mapAnimation = () => {
+    document.querySelector("section.map img").classList.add("active");
+    document.querySelector("section.map p").classList.add("active");
+  };
+
   render() {
     const cube = logo => (
       <div className="scene">
@@ -187,17 +191,31 @@ class Introduction extends React.Component {
             </p>
           </div>
         </section>
-        <section className="about-me">
+        <div className="section-title">
+          {this.props.language === "en"
+            ? Data.en.introduction.technologies
+            : Data.es.introduction.technologies}
+        </div>
+        <section className="technologies">
           <div className="cubesHolder">
-            {cube(HTMLLogo)}
-            {cube(CSSLogo)}
             {cube(JavaScriptLogo)}
             {cube(ReactLogo)}
+            {cube(GimpLogo)}
+            {cube(ReduxLogo)}
             {cube(NativeLogo)}
             {cube(NodeLogo)}
             {cube(MongoLogo)}
             {cube(GitLogo)}
           </div>
+        </section>
+        <section className="map">
+          <img src={Map} alt="" className="map" />
+          <p>
+            {this.props.language === "en"
+              ? Data.en.introduction.actualInfo
+              : Data.es.introduction.actualInfo}
+            <span>contact</span>
+          </p>
         </section>
       </>
     );

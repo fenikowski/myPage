@@ -34,6 +34,7 @@ div.footer div button {
   overflow: hidden;
   left: 72%;
   top: 24%;
+  transition: 0.3s;
 }
 
 div.footer div button i {
@@ -57,6 +58,7 @@ div.footer div.go-up button:hover i {
 
 div.footer div.go-up button:hover {
   cursor: pointer;
+  box-shadow: 0 0 0 3px #222, 0 0 0 6px rgba(0, 255, 0, 0.3);
 }
 
 div.footer div.go-up button:focus {

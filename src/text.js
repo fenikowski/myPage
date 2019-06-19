@@ -19,7 +19,11 @@ export default {
   aplicaciones de web usando las tecnologías nuevas y frameworks
   populares. En está página encontrarás informaciones sobre mi, mis
   habilidades y juegos, así mismo podrás ponerte en contacto conmigo y revisar
-  mi código. Me alegra que decidste echar una vista aquí. `
+  mi código. Me alegra que decidste echar una vista aquí. `,
+      technologies:
+        "Uso tecnologías más recientes para crear aplicaciones web modernos",
+      actualInfo:
+        "Actualmente vivo en Valéncia donde vine hace dos años para acabar mis estudios y me decidí por quedar. Sigo buscando ofertas de trabajo, si estás interesado, escríbeme en sección "
     },
     games: [
       {
@@ -104,7 +108,11 @@ export default {
     aplicaciones de web usando las tecnologías nuevas y frameworks
     populares. En está página encontrarás informaciones sobre mi, mis
     habilidades y juegos, así mismo podrás ponerte en contacto conmigo y revisar
-    mi código. Me alegra que decidste echar una vista aquí. `
+    mi código. Me alegra que decidste echar una vista aquí. `,
+      technologies:
+        "I use most recent technologies to create modern web aplicacionts",
+      actualInfo:
+        "Currently I live in Valencia where I came two years ago to complete my studies and I decided to stay. I'm looking for job offers, if you're interested in cooperation, write me in section "
     },
     games: [
       {
