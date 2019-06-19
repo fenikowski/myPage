@@ -1,7 +1,45 @@
 import React from "react";
+import "../styles/Footer.css";
+import Data from "../text";
+import { Route } from "react-router";
 
 const Footer = props => {
-  return <div>Footer</div>;
+  let text = "";
+  if (props.language === "es") {
+    text = Data.es.footer;
+  } else if (props.language === "en") {
+    text = Data.en.footer;
+  }
+
+  const location = () => {
+    if (window.location.pathname === "/") return <span>{text.main}</span>;
+    else return <span>{window.location.pathname}</span>;
+  };
+
+  return (
+    <div className="footer">
+      <div className="localization">
+        {text.localization}
+        <Route path="/" exact render={props => location()} />
+        <Route path="/habilidades" exact render={props => location()} />
+        <Route path="/juegos" exact render={props => location()} />
+        <Route path="/contact" exact render={props => location()} />
+      </div>
+      <div className="author">{text.author}</div>
+      <div className="go-up">
+        {text.up}
+        <button
+          class="arrow"
+          onClick={() => {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+          }}
+        >
+          <i class="fas fa-angle-down" />
+        </button>
+      </div>
+    </div>
+  );
 };
 
 export default Footer;

@@ -79,7 +79,13 @@ export default {
           image: Browsers
         }
       }
-    ]
+    ],
+    footer: {
+      author: "creado por Igor Fenikowski",
+      localization: "Estás en ",
+      up: "Volver a la parte superior ",
+      main: "inicio"
+    }
   },
   en: {
     headers: {
@@ -156,6 +162,12 @@ export default {
           image: Browsers
         }
       }
-    ]
+    ],
+    footer: {
+      author: "created by Igor Fenikowski",
+      localization: "You're in ",
+      up: "Go back to the top",
+      main: "start"
+    }
   }
 };

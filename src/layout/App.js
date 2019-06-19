@@ -34,6 +34,7 @@ class App extends React.Component {
           <Navigation language={this.state.language} />
           <Header language={this.state.language} />
           <Page language={this.state.language} />
+          <Footer language={this.state.language} />
         </Router>
       </>
     );

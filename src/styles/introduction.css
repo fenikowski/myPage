@@ -216,7 +216,7 @@ div.cubesHolder {
 }
 
 .cube__face--front {
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .cube__face--front img {
@@ -228,19 +228,19 @@ div.cubesHolder {
 }
 
 .cube__face--right {
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.8);
 }
 .cube__face--back {
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.8);
 }
 .cube__face--left {
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.8);
 }
 .cube__face--top {
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.8);
 }
 .cube__face--bottom {
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .cube__face--front {
