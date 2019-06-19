@@ -25,7 +25,10 @@ const Footer = props => {
         <Route path="/juegos" exact render={props => location()} />
         <Route path="/contact" exact render={props => location()} />
       </div>
-      <div className="author">{text.author}</div>
+      <div className="author">
+        {text.author}
+        <span>Igor Fenikowski</span>
+      </div>
       <div className="go-up">
         {text.up}
         <button

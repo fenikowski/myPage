@@ -48,13 +48,13 @@ class InitialHeader extends React.Component {
 
   handleScroll = e => {
     this.setState({
-      bgc1: `${0 + window.scrollY / 3}px`,
-      bgc2: `${77 + window.scrollY / 4}px`,
-      bgc3: `${270 + window.scrollY / 7}px`,
-      bgc4: `${269 + window.scrollY / 15}px`,
-      wrapper: `${window.scrollY / 1.5}px`,
-      name: `${170 + window.scrollY / 1.2}px`,
-      specialty: `${323 + window.scrollY / 1.2}px`
+      bgc1: `${0 + window.scrollY / 1}px`,
+      bgc2: `${77 + window.scrollY / 1.35}px`,
+      bgc3: `${270 + window.scrollY / 1.75}px`,
+      bgc4: `${269 + window.scrollY / 3.75}px`,
+      // wrapper: `${window.scrollY / 1.5}px`,
+      name: `${170 + window.scrollY / 2.4}px`,
+      specialty: `${323 + window.scrollY / 2.4}px`
     });
   };
 

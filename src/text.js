@@ -81,9 +81,9 @@ export default {
       }
     ],
     footer: {
-      author: "creado por Igor Fenikowski",
-      localization: "Estás en ",
-      up: "Volver a la parte superior ",
+      author: "creado por ",
+      localization: "estás en ",
+      up: "volver a la parte superior ",
       main: "inicio"
     }
   },
@@ -164,9 +164,9 @@ export default {
       }
     ],
     footer: {
-      author: "created by Igor Fenikowski",
-      localization: "You're in ",
-      up: "Go back to the top",
+      author: "created by ",
+      localization: "you're in ",
+      up: "go back to the top",
       main: "start"
     }
   }

@@ -52,7 +52,7 @@ class Introduction extends React.Component {
   };
 
   handleScroll = () => {
-    if (window.scrollY > 1300 && this.state.photoClass === "") {
+    if (window.scrollY > 500 && this.state.photoClass === "") {
       this.addLetter();
       this.setState({
         photoClass: "active-profile-photo"
@@ -63,7 +63,7 @@ class Introduction extends React.Component {
       document
         .querySelectorAll("div.border div")
         .forEach(div => div.classList.add("active"));
-    } else if (window.scrollY < 1000) {
+    } else if (window.scrollY < 100) {
       this.setState({
         activeLetter: -15,
         photoClass: "",
@@ -71,11 +71,11 @@ class Introduction extends React.Component {
       });
       // border div
 
-      document
-        .querySelectorAll("div.border div")
-        .forEach(div => div.classList.remove("active"));
+      // document
+      //   .querySelectorAll("div.border div")
+      //   .forEach(div => div.classList.remove("active"));
     }
-    if (window.scrollY > 4700) {
+    if (window.scrollY > 1600) {
       this.cubeRotation();
     }
   };
