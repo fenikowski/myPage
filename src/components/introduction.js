@@ -200,9 +200,9 @@ class Introduction extends React.Component {
           <div className="cubesHolder">
             {cube(JavaScriptLogo)}
             {cube(ReactLogo)}
-            {cube(GimpLogo)}
-            {cube(ReduxLogo)}
             {cube(NativeLogo)}
+            {cube(ReduxLogo)}
+            {cube(GimpLogo)}
             {cube(NodeLogo)}
             {cube(MongoLogo)}
             {cube(GitLogo)}

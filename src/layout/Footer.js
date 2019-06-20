@@ -32,13 +32,13 @@ const Footer = props => {
       <div className="go-up">
         {text.up}
         <button
-          class="arrow"
+          className="arrow"
           onClick={() => {
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
           }}
         >
-          <i class="fas fa-angle-down" />
+          <i className="fas fa-angle-down" />
         </button>
       </div>
     </div>

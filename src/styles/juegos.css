@@ -5,6 +5,7 @@ div.gamePage {
   width: 100%;
   /* background-image: url(../img/stars.gif); */
   background-color: #232329;
+  /* background-image: url(../img/soil.gif); */
   margin-top: -40px;
   font-family: "Ubuntu";
 }
@@ -67,39 +68,46 @@ section.juegos h2 {
   text-align: center;
 }
 
-section.juegos div.gameImage {
+section.juegos a.gameImage {
+  display: block;
   position: absolute;
+  /* box-sizing: border-box; */
+  border-right: 2px rgb(192, 194, 233) solid;
+  border-left: 2px rgb(192, 194, 233) solid;
+  /* padding-right: 6px;
+  padding-left: 6px; */
   top: 5%;
-  height: 45%;
+  height: 42%;
   width: 40%;
   left: 5%;
   /* transform: translate(-50%, 0); */
   background-image: url(../img/game3off.gif);
-  background-size: cover;
+  background-size: 96%;
   background-position: center;
+  background-repeat: no-repeat;
   /* border: lightslategrey 5px solid; */
-  border-radius: 3px;
-  box-shadow: 0px 0px 0px 6px #34353e, 0px 0px 0px 8px rgb(192, 194, 233);
+  /* border-radius: 3px; */
+  /* box-shadow: 0px 0px 0px 6px #34353e; */
 }
 
-section.juegos div.gameImage:hover {
+section.juegos a.gameImage:hover {
   background-image: url(../img/game3on.gif);
   cursor: pointer;
 }
 
-section.juegos:nth-child(2) div.gameImage {
+section.juegos:nth-child(2) a.gameImage {
   background-image: url(../img/game2off.gif);
 }
 
-section.juegos:nth-child(2) div.gameImage:hover {
+section.juegos:nth-child(2) a.gameImage:hover {
   background-image: url(../img/game2on.gif);
   cursor: pointer;
 }
-section.juegos:nth-child(3) div.gameImage {
+section.juegos:nth-child(3) a.gameImage {
   background-image: url(../img/game1off.gif);
 }
 
-section.juegos:nth-child(3) div.gameImage:hover {
+section.juegos:nth-child(3) a.gameImage:hover {
   background-image: url(../img/game1on.gif);
   cursor: pointer;
 }
