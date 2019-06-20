@@ -19,7 +19,9 @@ const Juegos = props => {
         <h3>{game.h3}</h3>
         <p>{game.p}</p>
       </div>
-      <div className="gameImage" />
+      <a href={game.links.game} className="gameImage">
+        .
+      </a>
       <div className="gameInfo">
         <div>
           <img src={JavaScriptLogo} alt="javascript logo" />
@@ -36,7 +38,7 @@ const Juegos = props => {
           <img src={GitHubLogo} alt="github logo" />
           <p>
             El código disponible en <br />
-            <a href="https://github.com/fenikowski/SuperPotatoBros">GitHub</a>
+            <a href={game.links.github}>GitHub</a>
           </p>
         </div>
       </div>

@@ -5,7 +5,9 @@ export default {
   es: {
     headers: {
       gamesh1: `Juegos`,
-      gamesh2: `¡Haz clic para despertar el fuego!`
+      gamesh2: `¡Haz clic para despertar el fuego!`,
+      contacth1: "Contact",
+      contacth2: "¡Ponte en contacto conmigo!"
     },
     navigation: {
       start: "Inicio",
@@ -21,7 +23,7 @@ export default {
   habilidades y juegos, así mismo podrás ponerte en contacto conmigo y revisar
   mi código. Me alegra que decidste echar una vista aquí. `,
       technologies:
-        "Uso tecnologías más recientes para crear aplicaciones web modernos",
+        "Uso tecnologías más recientes para crear aplicaciones web modernas",
       actualInfo:
         "Actualmente vivo en Valéncia donde vine hace dos años para acabar mis estudios y me decidí por quedar. Sigo buscando ofertas de trabajo, si estás interesado, escríbeme en sección "
     },
@@ -45,6 +47,10 @@ export default {
                     es comercial, pero se admite gratuito para cualquier uso
                     personal.`,
           image: ChromeLogo
+        },
+        links: {
+          github: "https://github.com/fenikowski/SuperPotatoBros",
+          game: "http://fenikowski.site/SuperPotatoBros/stage1.html"
         }
       },
       {
@@ -63,6 +69,10 @@ export default {
                     es comercial, pero se admite gratuito para cualquier uso
                     personal.`,
           image: Browsers
+        },
+        links: {
+          github: "https://github.com/fenikowski/snake",
+          game: "http://fenikowski.site/Snake/Snake.html"
         }
       },
       {
@@ -81,20 +91,26 @@ export default {
                     es comercial, pero se admite gratuito para cualquier uso
                     personal.`,
           image: Browsers
+        },
+        links: {
+          github: "https://github.com/fenikowski/TicTacToe",
+          game: "http://fenikowski.site/TicTacToe/TicTacToe.html"
         }
       }
     ],
     footer: {
-      author: "creado por ",
+      author: "creado en React por ",
       localization: "estás en ",
-      up: "volver a la parte superior ",
+      up: "volver hacia arriba ",
       main: "inicio"
     }
   },
   en: {
     headers: {
       gamesh1: `Games`,
-      gamesh2: `Click to awake the fire!`
+      gamesh2: `Click to awake the fire!`,
+      contacth1: "Contact",
+      contacth2: "Get in touch with me!"
     },
     navigation: {
       start: "Start",
@@ -110,9 +126,9 @@ export default {
     habilidades y juegos, así mismo podrás ponerte en contacto conmigo y revisar
     mi código. Me alegra que decidste echar una vista aquí. `,
       technologies:
-        "I use most recent technologies to create modern web aplicacionts",
+        "I use most recent technologies to create modern web aplicacions",
       actualInfo:
-        "Currently I live in Valencia where I came two years ago to complete my studies and I decided to stay. I'm looking for job offers, if you're interested in cooperation, write me in section "
+        "Currently I live in Valencia where I came two years ago to complete my studies and I decided to stay. I'm searching for job offers, if you're interested in cooperation, write me in section "
     },
     games: [
       {
@@ -172,7 +188,7 @@ export default {
       }
     ],
     footer: {
-      author: "created by ",
+      author: "created in React by ",
       localization: "you're in ",
       up: "go back to the top",
       main: "start"
