@@ -34,6 +34,22 @@ div.background-contact {
   /* border-bottom: 5px solid black; */
 }
 
+div.background-contact img {
+  animation: sunset 30s infinite;
+}
+
+@keyframes sunset {
+  0% {
+    filter: brightness(100%);
+  }
+  50% {
+    filter: brightness(35%) contrast(150%);
+  }
+  100% {
+    filter: brightness(100%);
+  }
+}
+
 div.background-games img {
   position: absolute;
   width: 100%;
@@ -180,4 +196,152 @@ h2.juegos span {
   left: 11px;
   top: 243px;
   z-index: 9;
+}
+
+@media (max-width: 1300px) and (orientation: portrait) {
+  div.background-wrapper {
+    height: 100vh;
+  }
+
+  .bgc1 {
+    height: 100vh;
+    width: 130vh;
+  }
+  .bgc2 {
+    height: 100vh;
+    width: 130vh;
+  }
+  .bgc3 {
+    height: 100vh;
+    width: 130vh;
+  }
+  .bgc4 {
+    height: 100vh;
+    width: 130vh;
+  }
+  .bgc5 {
+    height: 100vh;
+    width: 130vh;
+  }
+
+  .name {
+    transform: translate(-3vw, 3vh);
+  }
+
+  .specialty {
+    transform: translate(-3vw, 3vh);
+  }
+}
+@media (max-width: 1400px) and (orientation: landscape) {
+  div.background-wrapper {
+    height: 100vh;
+  }
+
+  .bgc1 {
+    height: 100vh;
+  }
+  .bgc2 {
+    height: 100vh;
+  }
+  .bgc3 {
+    height: 100vh;
+  }
+  .bgc4 {
+    height: 100vh;
+  }
+  .bgc5 {
+    height: 100vh;
+  }
+
+  .name {
+    transform: translate(0, 3vh);
+  }
+
+  .specialty {
+    transform: translate(0, 3vh);
+  }
+}
+@media (max-width: 420px) and (orientation: portrait) {
+  body {
+    overflow: hidden;
+  }
+
+  div.background-wrapper {
+    height: 100vh;
+    /* transform: translate(-20vh); */
+  }
+
+  .bgc1 {
+    height: 100vh;
+    width: 180vh;
+  }
+  .bgc2 {
+    height: 100vh;
+    width: 180vh;
+  }
+  .bgc3 {
+    height: 100vh;
+    width: 180vh;
+  }
+  .bgc4 {
+    height: 100vh;
+    width: 180vh;
+  }
+  .bgc5 {
+    height: 100vh;
+    width: 180vh;
+  }
+
+  h1.name {
+    font-size: 50px;
+    transform: translate(-80px, 35px);
+  }
+
+  h2.specialty {
+    font-size: 40px;
+    transform: translate(-200px, -60px);
+  }
+}
+@media (max-width: 376px) and (orientation: portrait) {
+  body {
+    overflow: hidden;
+  }
+
+  div.background-wrapper {
+    height: 111vh;
+    width: 100%;
+    /* transform: translate(20vh); */
+    overflow: hidden;
+  }
+
+  .bgc1 {
+    height: 100vh;
+    width: 180vh;
+  }
+  .bgc2 {
+    height: 100vh;
+    width: 180vh;
+  }
+  .bgc3 {
+    height: 100vh;
+    width: 180vh;
+  }
+  .bgc4 {
+    height: 100vh;
+    width: 180vh;
+  }
+  .bgc5 {
+    height: 100vh;
+    width: 180vh;
+  }
+
+  h1.name {
+    font-size: 50px;
+    transform: translate(-80px, 35px);
+  }
+
+  h2.specialty {
+    font-size: 40px;
+    transform: translate(-200px, -60px);
+  }
 }

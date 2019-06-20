@@ -1,0 +1,99 @@
+section.contact {
+  background-color: #111;
+  padding-bottom: 30px;
+  overflow: hidden;
+  display: flex;
+
+  flex-direction: row;
+}
+
+.contact div.form {
+  flex-basis: 49%;
+  flex-grow: 1;
+  text-align: center;
+  display: inline-block;
+}
+
+.contact input,
+.contact textarea,
+.contact button {
+  width: 80%;
+  height: 36px;
+  margin: 29px 0;
+  font-family: "Barlow Condensed";
+  font-size: 14px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.contact #message-content {
+  height: 160px;
+}
+.contact button {
+  transition: 0.5s;
+  width: 80%;
+  height: 42px;
+  border: 1px white solid;
+  background-color: transparent;
+  color: white;
+  text-transform: uppercase;
+}
+
+.contact button:hover {
+  color: black;
+  background-color: floralwhite;
+  cursor: pointer;
+}
+
+.contact .address {
+  padding-left: 30px;
+  flex-basis: 49%;
+  flex-grow: 1;
+}
+
+.contact div.address a.address-box {
+  display: block;
+  width: 80%;
+  height: 50px;
+  color: white;
+  margin: 5% 10%;
+  transform: translate(200%, 0%);
+  transition: 1s;
+}
+
+.contact div.address a.address-box.active {
+  transform: translate(0%, 0%);
+}
+
+.contact div.address a.address-box p {
+  display: block;
+  float: left;
+  box-sizing: content-box;
+  line-height: 60px;
+  padding-left: 30px;
+  font-family: "Barlow Condensed";
+  font-size: 24px;
+  margin-top: 5px;
+}
+
+.contact div.address a.address-box img {
+  width: 36px;
+  border-radius: 36px;
+  margin: 7px 0;
+  float: left;
+  transition: 0.2s;
+  width: 60px;
+}
+
+.contact div.address a.address-box:hover img {
+  cursor: pointer;
+  box-shadow: 0 0 0 4px #000, 0 0 0 8px rgba(0, 255, 0, 0.3);
+}
+
+.contact div.address a.address-box img:focus {
+  outline: none;
+}
+
+.github-contact {
+  filter: brightness(200%);
+}

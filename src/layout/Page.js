@@ -2,6 +2,7 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 import Introduction from "../components/introduction.js";
 import Juegos from "../components/juegos.js";
+import Contact from "../components/contact";
 
 const Page = props => {
   return (
@@ -17,7 +18,10 @@ const Page = props => {
           path="/juegos"
           render={() => <Juegos language={props.language} />}
         />
-        <Route path="/contact" render={() => <p>estoy en peliculas</p>} />
+        <Route
+          path="/contact"
+          render={() => <Contact language={props.language} />}
+        />
         <Route render={() => <p>Error 404</p>} />
       </Switch>
     </div>

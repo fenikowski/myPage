@@ -7,9 +7,8 @@ import bgc4 from "../img/bgc4.png";
 import bgc5 from "../img/bgc5.png";
 import gif1 from "../img/gif1.gif";
 import gif2 from "../img/gif2.gif";
-import bgcAbilities from "../img/examplePhoto.jpg";
+import bgcContact from "../img/examplePhoto.jpg";
 import { Switch, Route } from "react-router";
-import "./funcionality";
 import Data from "../text";
 
 class InitialHeader extends React.Component {
@@ -157,7 +156,7 @@ class HeaderGames extends React.Component {
 
 class HeaderHabilidades extends React.Component {
   state = {
-    backgroundImage: bgcAbilities
+    backgroundImage: bgcContact
   };
 
   componentDidMount() {
@@ -175,7 +174,7 @@ class HeaderHabilidades extends React.Component {
           <img src={this.state.backgroundImage} alt="" />
         </div>
         <h1 className="name">Habilidades</h1>
-        <h2 className="specialty">Una inscripción ejemplaria</h2>
+        <h2 className="specialty">Sección en desarrollo</h2>
       </>
     );
   }
@@ -183,7 +182,7 @@ class HeaderHabilidades extends React.Component {
 
 class HeaderContact extends React.Component {
   state = {
-    backgroundImage: bgcAbilities
+    backgroundImage: bgcContact
   };
 
   componentDidMount() {
@@ -195,13 +194,19 @@ class HeaderContact extends React.Component {
   }
 
   render() {
+    let titles = "";
+    if (this.props.language === "es") {
+      titles = Data.es.headers;
+    } else if (this.props.language === "en") {
+      titles = Data.en.headers;
+    }
     return (
       <>
         <div className="background-contact">
           <img src={this.state.backgroundImage} alt="" />
         </div>
-        <h1 className="name">Contact</h1>
-        <h2 className="specialty">Una inscripción ejemplaria</h2>
+        <h1 className="name">{titles.contacth1}</h1>
+        <h2 className="specialty">{titles.contacth2}</h2>
       </>
     );
   }
@@ -217,7 +222,10 @@ const Header = props => {
           render={() => <HeaderGames language={props.language} />}
         />
         <Route path="/habilidades" component={HeaderHabilidades} />
-        <Route path="/contact" component={HeaderContact} />
+        <Route
+          path="/contact"
+          render={() => <HeaderContact language={props.language} />}
+        />
       </Switch>
     </>
   );
