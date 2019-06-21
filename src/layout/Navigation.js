@@ -19,11 +19,11 @@ const Navigation = props => {
       path: "/",
       exact: true
     },
-    {
-      id: 1,
-      name: titles.skills,
-      path: "/projects"
-    },
+    // {
+    //   id: 1,
+    //   name: titles.skills,
+    //   path: "/projects"
+    // },
     {
       id: 2,
       name: titles.games,

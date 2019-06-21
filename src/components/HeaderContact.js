@@ -27,8 +27,8 @@ class HeaderContact extends React.Component {
         <div className="background-contact">
           <img src={this.state.backgroundImage} alt="" />
         </div>
-        <h1 className="name">{titles.contacth1}</h1>
-        <h2 className="specialty">{titles.contacth2}</h2>
+        <h1 className="name contact">{titles.contacth1}</h1>
+        <h2 className="specialty contact">{titles.contacth2}</h2>
       </>
     );
   }

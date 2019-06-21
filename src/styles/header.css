@@ -1,5 +1,5 @@
 div.background-wrapper {
-  width: 1536px;
+  width: 100%;
   height: 900px;
   margin: 0 auto;
   position: relative;
@@ -8,7 +8,7 @@ div.background-wrapper {
   /* border-bottom: 5px solid black; */
 }
 div.background-games {
-  width: 1536px;
+  width: 100%;
   height: 900px;
   margin: 0 auto;
   position: relative;
@@ -17,7 +17,7 @@ div.background-games {
 }
 
 div.background-abilities {
-  width: 1536px;
+  width: 100%;
   height: 900px;
   margin: 0 auto;
   position: relative;
@@ -26,7 +26,7 @@ div.background-abilities {
 }
 
 div.background-contact {
-  width: 1536px;
+  width: 100%;
   height: 900px;
   margin: 0 auto;
   position: relative;
@@ -198,9 +198,40 @@ h2.juegos span {
   z-index: 9;
 }
 
-@media (max-width: 1300px) and (orientation: portrait) {
+@media (max-width: 1200px) and (orientation: portrait) {
   div.background-wrapper {
     height: 100vh;
+  }
+
+  div.background-games {
+    height: 100vh;
+  }
+
+  div.background-games img {
+    width: initial;
+    height: 100%;
+    transform: translate(-10%);
+  }
+
+  h1.name.juegos {
+    font-size: 130px;
+    transform: translate(0, 5vh);
+  }
+
+  h2.specialty.juegos {
+    font-size: 70px;
+    transform: translate(-250px, 7vh);
+    word-wrap: break-word;
+    /* width: 200px; */
+    /* white-space: normal; */
+  }
+
+  h2.specialty.contact {
+    font-size: 80px;
+    transform: translate(-200px, 5vh);
+    word-wrap: break-word;
+    /* width: 200px; */
+    /* white-space: normal; */
   }
 
   .bgc1 {
@@ -210,6 +241,7 @@ h2.juegos span {
   .bgc2 {
     height: 100vh;
     width: 130vh;
+    transform: translate(-7px);
   }
   .bgc3 {
     height: 100vh;
@@ -218,10 +250,12 @@ h2.juegos span {
   .bgc4 {
     height: 100vh;
     width: 130vh;
+    transform: translate(-2px);
   }
   .bgc5 {
     height: 100vh;
     width: 130vh;
+    transform: translate(-9px);
   }
 
   .name {
@@ -229,81 +263,141 @@ h2.juegos span {
   }
 
   .specialty {
-    transform: translate(-3vw, 3vh);
+    transform: translate(-15vw, 3vh);
+  }
+
+  div.background-contact {
+    height: 100vh;
+  }
+
+  div.background-contact img {
+    height: 100vh;
+  }
+
+  h1.name.contact {
+    text-align: center;
+    top: 20vh;
+    width: 100%;
+    left: 0vw;
+    transform: none;
+    animation: none;
+    font-size: 150px;
+  }
+
+  h2.specialty.contact {
+    font-size: 120px;
+    white-space: normal;
+    width: 100%;
+    animation: none;
+    text-align: center;
+    top: 35vh;
+    left: 0;
+    transform: none;
   }
 }
-@media (max-width: 1400px) and (orientation: landscape) {
-  div.background-wrapper {
-    height: 100vh;
-  }
 
-  .bgc1 {
-    height: 100vh;
-  }
-  .bgc2 {
-    height: 100vh;
-  }
-  .bgc3 {
-    height: 100vh;
-  }
-  .bgc4 {
-    height: 100vh;
-  }
-  .bgc5 {
-    height: 100vh;
-  }
-
-  .name {
-    transform: translate(0, 3vh);
-  }
-
-  .specialty {
-    transform: translate(0, 3vh);
-  }
-}
-@media (max-width: 420px) and (orientation: portrait) {
-  body {
-    overflow: hidden;
-  }
-
-  div.background-wrapper {
-    height: 100vh;
-    /* transform: translate(-20vh); */
-  }
-
-  .bgc1 {
-    height: 100vh;
-    width: 180vh;
-  }
-  .bgc2 {
-    height: 100vh;
-    width: 180vh;
-  }
-  .bgc3 {
-    height: 100vh;
-    width: 180vh;
-  }
-  .bgc4 {
-    height: 100vh;
-    width: 180vh;
-  }
-  .bgc5 {
-    height: 100vh;
-    width: 180vh;
-  }
-
+@media (max-width: 1100px) and (orientation: portrait) {
   h1.name {
-    font-size: 50px;
-    transform: translate(-80px, 35px);
+    font-size: 110px;
+    transform: translate(-3vw, 0vh);
   }
 
   h2.specialty {
-    font-size: 40px;
-    transform: translate(-200px, -60px);
+    font-size: 70px;
+    transform: translate(-10vw, 0vh);
   }
 }
-@media (max-width: 376px) and (orientation: portrait) {
+@media (max-width: 900px) and (orientation: portrait) {
+  h1.name {
+    font-size: 100px;
+    transform: translate(-3vw, 0vh);
+  }
+
+  h2.specialty {
+    font-size: 60px;
+    transform: translate(-30vw, 0vh);
+  }
+
+  @keyframes animationh1 {
+    0% {
+      left: -850px;
+    }
+    1% {
+      left: 30px;
+    }
+    10% {
+      left: 90px;
+    }
+    25% {
+      left: 120px;
+    }
+    65% {
+      left: 60px;
+    }
+    100% {
+      left: 90px;
+    }
+  }
+
+  @keyframes animationh2 {
+    0% {
+      left: 1500px;
+    }
+
+    1% {
+      left: 360px;
+    }
+    10% {
+      left: 330px;
+    }
+    25% {
+      left: 300px;
+    }
+    65% {
+      left: 330px;
+    }
+    100% {
+      left: 300px;
+    }
+  }
+
+  h1.name.juegos {
+    font-size: 140px;
+    transform: translate(0, 8vh);
+  }
+
+  h2.specialty.juegos {
+    text-align: center;
+    font-size: 55px;
+    transform: translate(185px, 24vh);
+    word-wrap: break-word;
+    width: 400px;
+    white-space: normal;
+    animation: none;
+  }
+
+  h1.name.contact {
+    text-align: center;
+    top: 20vh;
+    width: 100%;
+    left: 0vw;
+    transform: none;
+    animation: none;
+  }
+
+  h2.specialty.contact {
+    font-size: 80px;
+    white-space: normal;
+    width: 100%;
+    animation: none;
+    text-align: center;
+    top: 40vh;
+  }
+}
+
+@media (max-width: 420px) and (orientation: portrait) {
   body {
+    width: 100vw;
     overflow: hidden;
   }
 
@@ -314,6 +408,19 @@ h2.juegos span {
     overflow: hidden;
   }
 
+  div.background-games {
+    height: 100vh;
+  }
+  div.background-contact {
+    height: 100vh;
+  }
+
+  div.background-games img {
+    width: initial;
+    height: 100%;
+    transform: translate(-20%);
+  }
+
   .bgc1 {
     height: 100vh;
     width: 180vh;
@@ -337,11 +444,217 @@ h2.juegos span {
 
   h1.name {
     font-size: 50px;
-    transform: translate(-80px, 35px);
+    top: 100px;
+    left: 15px;
+    transform: translate(0, -5px);
+    animation: none;
   }
 
   h2.specialty {
+    font-size: 35px;
+    top: 30px;
+    left: 30px;
+    transform: translate(0, -90px);
+    animation: none;
+  }
+
+  h1.name.juegos {
+    font-size: 90px;
+    transform: translate(20px, -5px);
+  }
+
+  h2.specialty.juegos {
+    text-align: center;
+    font-size: 35px;
+    transform: translate(170px, 38vh);
+    word-wrap: break-word;
+    width: 200px;
+    white-space: normal;
+  }
+
+  h1.name.contact {
+    font-size: 80px;
+  }
+
+  h2.specialty.contact {
+    font-size: 60px;
+    transform: translate(-10px, -5vh);
+  }
+}
+
+@media (max-width: 376px) and (orientation: portrait) {
+  h1.name {
+    font-size: 45px;
+    top: 100px;
+    left: 15px;
+  }
+
+  h2.specialty {
+    text-align: center;
+    font-size: 35px;
+    top: 30px;
+    left: 20px;
+  }
+
+  h2.specialty.juegos {
+    font-size: 30px;
+    transform: translate(170px, 40vh);
+    word-wrap: break-word;
+    width: 180px;
+    white-space: normal;
+  }
+
+  h1.name.contact {
+    font-size: 80px;
+  }
+
+  h2.specialty.contact {
+    font-size: 60px;
+    transform: translate(-10px, -5vh);
+  }
+}
+
+@media (max-width: 374px) and (orientation: portrait) {
+  .bgc3 {
+    transform: translate(0, -2vh);
+  }
+
+  h1.name {
     font-size: 40px;
-    transform: translate(-200px, -60px);
+    top: 100px;
+    left: 20px;
+  }
+
+  h2.specialty {
+    text-align: center;
+    font-size: 30px;
+    top: 30px;
+    left: 25px;
+    transform: translate(0px, -100px);
+  }
+
+  h1.name.juegos {
+    transform: translate(20px, -35px);
+  }
+
+  h2.specialty.juegos {
+    transform: translate(150px, 37vh);
+  }
+}
+
+@media (max-width: 359px) and (orientation: portrait) {
+  h1.name {
+    left: 10px;
+  }
+
+  h2.specialty {
+    left: 15px;
+  }
+
+  h2.specialty.contact {
+    transform: translate(0px, 0vh);
+    font-size: 55px;
+  }
+  h2.specialty.juegos {
+    transform: translate(120px, 35vh);
+  }
+}
+
+@media (max-width: 1400px) and (orientation: landscape) {
+  div.background-wrapper {
+    height: 100vh;
+  }
+
+  div.background-games {
+    height: 100vh;
+  }
+
+  div.background-games img {
+    height: 100%;
+  }
+
+  div.background-contact {
+    height: 100vh;
+  }
+
+  div.background-contact img {
+    height: 100%;
+  }
+
+  .bgc1 {
+    height: 100vh;
+  }
+  .bgc2 {
+    height: 100vh;
+  }
+  .bgc3 {
+    height: 100vh;
+  }
+  .bgc4 {
+    height: 100vh;
+  }
+  .bgc5 {
+    height: 100vh;
+  }
+
+  h1.name {
+    transform: translate(0, 3vh);
+  }
+
+  h2.specialty {
+    transform: translate(0, 3vh);
+  }
+}
+
+@media (max-width: 1200px) and (orientation: landscape) {
+  h1.name {
+    font-size: 110px;
+  }
+
+  h2.specialty {
+    font-size: 70px;
+    transform: translate(-10vw, 2vh);
+  }
+
+  h1.name.juegos {
+    font-size: 100px;
+    transform: translate(0, 4vh);
+  }
+
+  h2.specialty.juegos {
+    transform: translate(-20vw, 1vh);
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 900px) and (orientation: landscape) {
+  h1.name {
+    font-size: 80px;
+    transform: translate(-10vw, -20vh);
+  }
+
+  h2.specialty {
+    font-size: 60px;
+    transform: translate(-18vw, -32vh);
+  }
+
+  h1.name.juegos {
+    font-size: 100px;
+    transform: translate(0, 4vh);
+  }
+
+  h2.specialty.juegos {
+    transform: translate(-20vw, 1vh);
+    font-size: 60px;
+  }
+
+  .bgc3 {
+    transform: translate(0, -22vh);
+  }
+  .bgc4 {
+    transform: translate(0, -22vh);
+  }
+  .bgc5 {
+    transform: translate(0, -22vh);
   }
 }
