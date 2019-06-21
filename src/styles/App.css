@@ -25,6 +25,11 @@ body {
   font-family: "Barlow Condensed";
 }
 
+.stop-scrolling {
+  height: 100vh;
+  overflow: hidden;
+}
+
 button.language {
   position: absolute;
   top: 10px;

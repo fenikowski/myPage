@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
+import LoadingScreen from "./LoadingScreen";
 import Aside from "./Aside";
 import Navigation from "./Navigation";
 import Footer from "./Footer";
@@ -29,6 +30,7 @@ class App extends React.Component {
     return (
       <>
         <Router>
+          <LoadingScreen />
           <button className="language US" onClick={this.handleClickEnglish} />
           <button className="language ES" onClick={this.handleClickSpanish} />
           <Navigation language={this.state.language} />
