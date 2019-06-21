@@ -15,7 +15,7 @@ const Page = props => {
         />
         <Route path="/projectos" render={() => <p>estoy en vocabulario</p>} />
         <Route
-          path="/juegos"
+          path="/games"
           render={() => <Juegos language={props.language} />}
         />
         <Route

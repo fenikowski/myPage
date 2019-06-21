@@ -11,7 +11,7 @@ export default {
     },
     navigation: {
       start: "Inicio",
-      skills: "Habilidades",
+      skills: "Projectos",
       games: "Juegos",
       contact: "Contact"
     },
@@ -114,7 +114,7 @@ export default {
     },
     navigation: {
       start: "Start",
-      skills: "Skills",
+      skills: "Projects",
       games: "Games",
       contact: "Contact"
     },
@@ -148,6 +148,10 @@ export default {
                     es comercial, pero se admite gratuito para cualquier uso
                     personal.`,
           image: ChromeLogo
+        },
+        links: {
+          github: "https://github.com/fenikowski/SuperPotatoBros",
+          game: "http://fenikowski.site/SuperPotatoBros/stage1.html"
         }
       },
       {
@@ -166,6 +170,10 @@ export default {
                     es comercial, pero se admite gratuito para cualquier uso
                     personal.`,
           image: Browsers
+        },
+        links: {
+          github: "https://github.com/fenikowski/snake",
+          game: "http://fenikowski.site/Snake/Snake.html"
         }
       },
       {
@@ -184,6 +192,10 @@ export default {
                     es comercial, pero se admite gratuito para cualquier uso
                     personal.`,
           image: Browsers
+        },
+        links: {
+          github: "https://github.com/fenikowski/TicTacToe",
+          game: "http://fenikowski.site/TicTacToe/TicTacToe.html"
         }
       }
     ],

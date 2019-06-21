@@ -61,11 +61,11 @@ class Contact extends React.Component {
             <p>/igor.fenikowski</p>
           </a>
           <a
-            href="https://www.linkedin.com/in/igor-fenikowski-940003189/"
+            href="https://www.linkedin.com/in/fenikowski/"
             className="address-box"
           >
             <img src={LinkedIn} alt="" />
-            <p>/in/igor-fenikowski-940003189</p>
+            <p>/in/fenikowski</p>
           </a>
         </div>
       </section>

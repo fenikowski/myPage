@@ -22,12 +22,12 @@ const Navigation = props => {
     {
       id: 1,
       name: titles.skills,
-      path: "/habilidades"
+      path: "/projects"
     },
     {
       id: 2,
       name: titles.games,
-      path: "/juegos"
+      path: "/games"
     },
     {
       id: 3,
