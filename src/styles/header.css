@@ -5,7 +5,8 @@ div.background-wrapper {
   position: relative;
   overflow: hidden;
   background-color: rgb(192, 191, 223);
-  /* border-bottom: 5px solid black; */
+  z-index: 1;
+  overflow: hidden;
 }
 div.background-games {
   width: 100%;
@@ -13,7 +14,6 @@ div.background-games {
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  /* border-bottom: 5px solid black; */
 }
 
 div.background-abilities {
@@ -22,7 +22,6 @@ div.background-abilities {
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  /* border-bottom: 5px solid black; */
 }
 
 div.background-contact {
@@ -31,7 +30,6 @@ div.background-contact {
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  /* border-bottom: 5px solid black; */
 }
 
 div.background-contact img {
@@ -315,7 +313,7 @@ h2.juegos span {
 
   h2.specialty {
     font-size: 60px;
-    transform: translate(-30vw, 0vh);
+    transform: translate(-30vw, -2vh);
   }
 
   @keyframes animationh1 {
@@ -579,6 +577,7 @@ h2.juegos span {
 
   div.background-contact img {
     height: 100%;
+    width: 100%;
   }
 
   .bgc1 {
@@ -629,23 +628,34 @@ h2.juegos span {
 
 @media (max-width: 900px) and (orientation: landscape) {
   h1.name {
-    font-size: 80px;
-    transform: translate(-10vw, -20vh);
+    font-size: 70px;
+    transform: translate(0vw, -20vh);
   }
 
   h2.specialty {
-    font-size: 60px;
-    transform: translate(-18vw, -32vh);
+    font-size: 50px;
+    transform: translate(-18vw, -37vh);
   }
 
   h1.name.juegos {
-    font-size: 100px;
-    transform: translate(0, 4vh);
+    font-size: 80px;
+    transform: translate(110vw, 0vh);
+    animation: none;
   }
 
   h2.specialty.juegos {
-    transform: translate(-20vw, 1vh);
-    font-size: 60px;
+    transform: translate(15vw, -10vh);
+    font-size: 50px;
+    width: 50vw;
+    white-space: normal;
+    animation: none;
+  }
+  h1.name.contact {
+    transform: translate(0vw, -25vh);
+  }
+  h2.specialty.contact {
+    font-size: 50px;
+    transform: translate(-18vw, -36vh);
   }
 
   .bgc3 {
@@ -656,5 +666,130 @@ h2.juegos span {
   }
   .bgc5 {
     transform: translate(0, -22vh);
+  }
+}
+
+@media (max-width: 800px) and (orientation: landscape) {
+  h1.name {
+    font-size: 65px;
+    transform: translate(0vw, -15vh);
+  }
+
+  h2.specialty {
+    font-size: 50px;
+    transform: translate(-30vw, -32vh);
+  }
+
+  h1.name.juegos {
+    font-size: 80px;
+    transform: translate(120vw, 0vh);
+    animation: none;
+  }
+
+  h2.specialty.juegos {
+    transform: translate(15vw, -10vh);
+    font-size: 50px;
+    width: 60vw;
+    white-space: normal;
+    animation: none;
+  }
+
+  h2.specialty.contact {
+    font-size: 50px;
+    transform: translate(-24vw, -36vh);
+  }
+}
+
+@media (max-width: 700px) and (orientation: landscape) {
+  h1.name {
+    font-size: 60px;
+    transform: translate(0vw, -20vh);
+  }
+
+  h2.specialty {
+    font-size: 40px;
+    transform: translate(-35vw, -41vh);
+  }
+
+  h1.name.juegos {
+    font-size: 60px;
+    transform: translate(140vw, 2vh);
+    animation: none;
+  }
+
+  h2.specialty.juegos {
+    transform: translate(15vw, -20vh);
+    font-size: 40px;
+    width: 50vw;
+    white-space: normal;
+    animation: none;
+  }
+  h1.name.contact {
+    transform: translate(0vw, -20vh);
+  }
+  h2.specialty.contact {
+    font-size: 50px;
+    transform: translate(-36vw, -36vh);
+  }
+
+  .bgc2 {
+    transform: translate(0, -5vh);
+  }
+
+  .bgc3 {
+    transform: translate(0, -35vh);
+  }
+  .bgc4 {
+    transform: translate(0, -35vh);
+  }
+  .bgc5 {
+    transform: translate(0, -35vh);
+  }
+}
+@media (max-width: 600px) and (orientation: landscape) {
+  h1.name {
+    font-size: 50px;
+    transform: translate(0vw, -20vh);
+  }
+
+  h2.specialty {
+    font-size: 35px;
+    transform: translate(-35vw, -50vh);
+  }
+
+  h1.name.juegos {
+    font-size: 50px;
+    transform: translate(160vw, 2vh);
+    animation: none;
+  }
+
+  h2.specialty.juegos {
+    transform: translate(10vw, -20vh);
+    font-size: 35px;
+    width: 50vw;
+    white-space: normal;
+    animation: none;
+  }
+  h1.name.contact {
+    font-size: 45px;
+    transform: translate(0vw, -20vh);
+  }
+  h2.specialty.contact {
+    font-size: 35px;
+    transform: translate(-36vw, -48vh);
+  }
+
+  .bgc2 {
+    transform: translate(0, -5vh);
+  }
+
+  .bgc3 {
+    transform: translate(0, -35vh);
+  }
+  .bgc4 {
+    transform: translate(0, -35vh);
+  }
+  .bgc5 {
+    transform: translate(0, -35vh);
   }
 }

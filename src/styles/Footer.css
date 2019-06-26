@@ -74,3 +74,76 @@ div.footer div.go-up button:focus {
     top: -180%;
   }
 }
+
+@media (max-width: 900px) and (orientation: portrait) {
+  div.footer {
+    height: 10vh;
+    text-align: center;
+    line-height: 10vh;
+    z-index: 20;
+  }
+
+  div.footer div {
+    flex-basis: 30%;
+    flex-grow: 1;
+    position: relative;
+  }
+
+  div.footer div:nth-child(1) {
+    display: none;
+  }
+  div.footer div:nth-child(2) {
+    flex-basis: 70%;
+  }
+  div.footer div:nth-child(3) {
+    font-size: 0px;
+  }
+
+  div.footer div span {
+    font-weight: 600;
+  }
+
+  div.footer div button {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    left: 40%;
+    top: 24%;
+  }
+
+  div.footer div button i {
+    top: -80%;
+    left: 50%;
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 900px) and (orientation: landscape) {
+  div.footer div button {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    left: 80%;
+    top: 15%;
+  }
+
+  div.footer div button i {
+    top: -80%;
+    left: 50%;
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 600px) and (orientation: landscape) {
+  div.footer div button {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    left: 80%;
+    top: 5%;
+  }
+
+  div.footer div {
+    font-size: 14px;
+  }
+}

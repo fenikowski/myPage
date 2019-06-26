@@ -155,16 +155,18 @@ class Introduction extends React.Component {
 
   render() {
     const cube = logo => (
-      <div className="scene">
-        <div className="cube show-back">
-          <div className="cube__face cube__face--front">
-            <img src={logo} alt="javascript logo" />
+      <div className="cube-holder">
+        <div className="scene">
+          <div className="cube show-back">
+            <div className="cube__face cube__face--front">
+              <img src={logo} alt="javascript logo" />
+            </div>
+            <div className="cube__face cube__face--back" />
+            <div className="cube__face cube__face--right" />
+            <div className="cube__face cube__face--left" />
+            <div className="cube__face cube__face--top" />
+            <div className="cube__face cube__face--bottom" />
           </div>
-          <div className="cube__face cube__face--back" />
-          <div className="cube__face cube__face--right" />
-          <div className="cube__face cube__face--left" />
-          <div className="cube__face cube__face--top" />
-          <div className="cube__face cube__face--bottom" />
         </div>
       </div>
     );
@@ -192,12 +194,14 @@ class Introduction extends React.Component {
           </div>
         </section>
         <div className="section-title">
-          {this.props.language === "en"
-            ? Data.en.introduction.technologies
-            : Data.es.introduction.technologies}
+          <p>
+            {this.props.language === "en"
+              ? Data.en.introduction.technologies
+              : Data.es.introduction.technologies}
+          </p>
         </div>
         <section className="technologies">
-          <div className="cubesHolder">
+          <div className="cubes-holder">
             {cube(JavaScriptLogo)}
             {cube(ReactLogo)}
             {cube(NativeLogo)}

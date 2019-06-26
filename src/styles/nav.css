@@ -73,3 +73,14 @@ div.holder {
     font-size: 20px;
   }
 }
+
+@media (max-width: 900px) and (orientation: landscape) {
+  nav.main-navigation {
+    height: 5vh;
+    top: 8px;
+    left: 10px;
+  }
+  .main-navigation ul li {
+    font-size: 20px;
+  }
+}

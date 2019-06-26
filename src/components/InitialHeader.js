@@ -88,13 +88,13 @@ class InitialHeader extends React.Component {
             src={bgc5}
             alt=""
           />
+          <h1 className="name" style={{ top: this.state.name }}>
+            Igor Fenikowski
+          </h1>
+          <h2 className="specialty" style={{ top: this.state.specialty }}>
+            Full-stack web developer
+          </h2>
         </div>
-        <h1 className="name" style={{ top: this.state.name }}>
-          Igor Fenikowski
-        </h1>
-        <h2 className="specialty" style={{ top: this.state.specialty }}>
-          Full-stack web developer
-        </h2>
       </>
     );
   }
