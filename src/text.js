@@ -103,6 +103,14 @@ export default {
       localization: "estás en ",
       up: "volver hacia arriba ",
       main: "inicio"
+    },
+    contact: {
+      name: "tu nombre",
+      email: "tu correo eléctronico",
+      message: "contenido del mensaje",
+      button: "envía mensaje",
+      clipboard: "copiar a portapapeles",
+      copied: "¡copiado!"
     }
   },
   en: {
@@ -204,6 +212,14 @@ export default {
       localization: "you're in ",
       up: "go back to the top",
       main: "start"
+    },
+    contact: {
+      name: "your name",
+      email: "your email",
+      message: "message content",
+      button: "send message",
+      clipboard: "copy to clipboard",
+      copied: "copied!"
     }
   }
 };
