@@ -15,14 +15,22 @@ class LoadingScreen extends React.Component {
       // array for squares
       let squaresArray = [];
 
-      for (let i = 0; i < 1500; i++) {
+      // squares size algorythm
+      let squaresSize = 0;
+      if (window.innerHeight > window.innerWidth) {
+        squaresSize = window.innerHeight / 50 + "px";
+      } else {
+        squaresSize = window.innerWidth / 50 + "px";
+      }
+
+      for (let i = 0; i < (window.innerWidth * window.innerHeight) / 50; i++) {
         const square = document.createElement("div");
         document
           .querySelector("div.loadingScreen div.squares")
           .appendChild(square);
         square.classList.add("square");
-        square.style.width = window.innerWidth / 50 + "px";
-        square.style.height = window.innerWidth / 50 + "px";
+        square.style.width = squaresSize;
+        square.style.height = squaresSize;
 
         square.style.background = `conic-gradient(from 40deg, #08091e, #000, #08091e)`;
 
