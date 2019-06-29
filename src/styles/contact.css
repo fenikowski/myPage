@@ -25,7 +25,7 @@ section.contact {
   box-sizing: border-box;
 }
 
-.contact #message-content {
+.contact #message {
   height: 160px;
 }
 .contact button {
@@ -50,7 +50,7 @@ section.contact {
   flex-grow: 1;
 }
 
-.contact div.address a.address-box {
+.contact div.address .address-box {
   display: block;
   width: 50%;
   height: 50px;
@@ -60,11 +60,11 @@ section.contact {
   transition: 1s;
 }
 
-.contact div.address a.address-box.active {
+.contact div.address .address-box.active {
   transform: translate(0%, 0%);
 }
 
-.contact div.address a.address-box p {
+.contact div.address .address-box p {
   display: block;
   float: left;
   box-sizing: content-box;
@@ -75,7 +75,7 @@ section.contact {
   margin-top: 5px;
 }
 
-.contact div.address a.address-box img {
+.contact div.address .address-box img {
   width: 36px;
   border-radius: 36px;
   margin: 7px 0;
@@ -84,15 +84,59 @@ section.contact {
   width: 60px;
 }
 
-.contact div.address a.address-box:hover img {
+.contact div.address .address-box:hover img {
   cursor: pointer;
   box-shadow: 0 0 0 4px #000, 0 0 0 8px rgba(0, 255, 0, 0.3);
 }
 
-.contact div.address a.address-box img:focus {
+.contact div.address .address-box img:focus {
   outline: none;
 }
 
 .github-contact {
   filter: brightness(200%);
+}
+
+/* tooltip css */
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  min-width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 10px 5px 10px;
+  position: absolute;
+  z-index: 5;
+  bottom: 90%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.address-box.tooltip input {
+  opacity: 0;
 }
