@@ -53,7 +53,11 @@ class Introduction extends React.Component {
   };
 
   handleScroll = () => {
-    if (window.scrollY > 350 && this.state.photoClass === "") {
+    if (
+      window.scrollY + window.innerHeight >
+        document.querySelector("section.introduction").offsetTop &&
+      this.state.photoClass === ""
+    ) {
       this.addLetter();
       this.setState({
         photoClass: "active-profile-photo"
@@ -71,10 +75,18 @@ class Introduction extends React.Component {
         passedText: ""
       });
     }
-    if (window.scrollY > 1600) {
+    if (
+      window.scrollY + window.innerHeight >
+      document.querySelector("section.technologies").offsetTop +
+        document.querySelector("section.technologies").offsetHeight / 2
+    ) {
       this.cubeRotation();
     }
-    if (window.scrollY > 2400) {
+    if (
+      window.scrollY + window.innerHeight >
+      document.querySelector("section.map").offsetTop +
+        document.querySelector("section.map").offsetHeight / 2
+    ) {
       this.mapAnimation();
     }
   };
