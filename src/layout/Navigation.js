@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "../styles/nav.css";
-import Scroll from "../components/scroll.js";
 import Data from "../text";
 
 const Navigation = props => {
@@ -19,11 +18,11 @@ const Navigation = props => {
       path: "/",
       exact: true
     },
-    // {
-    //   id: 1,
-    //   name: titles.skills,
-    //   path: "/projects"
-    // },
+    {
+      id: 1,
+      name: titles.skills,
+      path: "/projects"
+    },
     {
       id: 2,
       name: titles.games,
@@ -46,7 +45,6 @@ const Navigation = props => {
 
   return (
     <>
-      {/* <Scroll /> */}
       <nav className="main-navigation">
         <div className="shadow" />
         <ul className="navigation">{list}</ul>
