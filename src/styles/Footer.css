@@ -93,10 +93,12 @@ div.footer div.go-up button:focus {
     display: none;
   }
   div.footer div:nth-child(2) {
-    flex-basis: 70%;
+    flex-basis: 80%;
+    padding-left: 10px;
   }
   div.footer div:nth-child(3) {
     font-size: 0px;
+    flex-basis: 20%;
   }
 
   div.footer div span {
@@ -107,7 +109,7 @@ div.footer div.go-up button:focus {
     width: 40px;
     height: 40px;
     border-radius: 40px;
-    left: 40%;
+    left: 10%;
     top: 24%;
   }
 

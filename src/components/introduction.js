@@ -230,7 +230,7 @@ class Introduction extends React.Component {
             {this.props.language === "en"
               ? Data.en.introduction.actualInfo
               : Data.es.introduction.actualInfo}
-            <span>contact</span>
+            <span>contact.</span>
           </p>
         </section>
       </>

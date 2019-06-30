@@ -150,12 +150,12 @@ class Contact extends React.Component {
             )}
             onMouseOut={this.handleMouseOut}
           >
-            <span class="tooltiptext" id="myTooltip">
+            <span className="tooltiptext" id="myTooltip">
               {text.clipboard}
             </span>
             <img src={Mail} alt="" />
             <p>fenikowski@gmail.com</p>
-            <input type="text" value="fenikowski@gmail.com" />
+            <input type="text" defaultValue="fenikowski@gmail.com" />
           </div>
           <div
             className="address-box tooltip"
@@ -165,12 +165,12 @@ class Contact extends React.Component {
             )}
             onMouseOut={this.handleMouseOut}
           >
-            <span class="tooltiptext" id="myTooltip2">
+            <span className="tooltiptext" id="myTooltip2">
               {text.clipboard}
             </span>
             <img src={Phone} alt="" />
             <p>+48 510 046 987</p>
-            <input type="text" value="+48 510 046 987" />
+            <input type="text" defaultValue="+48 510 046 987" />
           </div>
           <a href="https://github.com/fenikowski" className="address-box">
             <img src={GitHub} className="github-contact" alt="" />

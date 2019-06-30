@@ -3,8 +3,13 @@
 /* preloading files */
 
 body:after {
-  content: url(../img/gif2.gif) url(../img/examplePhoto.jpg)
-    url(../img/gif1.gif);
+  /* zobaczyc czy tak zadziala */
+  content: url(../img/game1off.gif) url(../img/game1on.gif)
+    url(../img/game2off.gif) url(../img/game2on.gif) url(../img/game3off.gif)
+    url(../img/game3on.gif) url(../img/bgc1.png) url(../img/bgc2.png)
+    url(../img/bgc3.png) url(../img/bgc4.png) url(../img/bgc5.png)
+    url(../img/gif1.gif) url(../img/gif2.gif) url(../img/examplePhoto.jpg)
+    url(../img/flagES.png) url(../img/flagUS.png) url(../img/map.PNG);
   display: none;
 }
 
