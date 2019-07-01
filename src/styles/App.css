@@ -9,7 +9,8 @@ body:after {
     url(../img/game3on.gif) url(../img/bgc1.png) url(../img/bgc2.png)
     url(../img/bgc3.png) url(../img/bgc4.png) url(../img/bgc5.png)
     url(../img/gif1.gif) url(../img/gif2.gif) url(../img/examplePhoto.jpg)
-    url(../img/flagES.png) url(../img/flagUS.png) url(../img/map.PNG);
+    url(../img/flagES.png) url(../img/flagUS.png) url(../img/map.png)
+    url(../img/galaxy.jpg);
   display: none;
 }
 

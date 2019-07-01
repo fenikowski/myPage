@@ -11,7 +11,7 @@ export default {
     },
     navigation: {
       start: "Inicio",
-      skills: "Projectos",
+      skills: "Habilidades",
       games: "Juegos",
       contact: "Contact"
     },
@@ -122,7 +122,7 @@ export default {
     },
     navigation: {
       start: "Start",
-      skills: "Projects",
+      skills: "Skills",
       games: "Games",
       contact: "Contact"
     },

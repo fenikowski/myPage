@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import Introduction from "../components/introduction.js";
 import Juegos from "../components/juegos.js";
 import Contact from "../components/contact";
+import Skills from "../components/skills";
 
 const Page = props => {
   return (
@@ -13,7 +14,10 @@ const Page = props => {
           exact
           render={() => <Introduction language={props.language} />}
         />
-        <Route path="/projectos" render={() => <p>estoy en vocabulario</p>} />
+        <Route
+          path="/skills"
+          render={() => <Skills language={props.language} />}
+        />
         <Route
           path="/games"
           render={() => <Juegos language={props.language} />}

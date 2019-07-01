@@ -21,7 +21,7 @@ const Footer = props => {
       <div className="localization">
         {text.localization}
         <Route path="/" exact render={props => location()} />
-        <Route path="/habilidades" exact render={props => location()} />
+        <Route path="/skills" exact render={props => location()} />
         <Route path="/juegos" exact render={props => location()} />
         <Route path="/contact" exact render={props => location()} />
       </div>
@@ -34,8 +34,7 @@ const Footer = props => {
         <button
           className="arrow"
           onClick={() => {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
+            window.scrollTo({ top: 0, behavior: "smooth" });
           }}
         >
           <i className="fas fa-angle-down" />

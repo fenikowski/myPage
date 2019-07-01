@@ -21,7 +21,7 @@ const Navigation = props => {
     {
       id: 1,
       name: titles.skills,
-      path: "/projects"
+      path: "/skills"
     },
     {
       id: 2,

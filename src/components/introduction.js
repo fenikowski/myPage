@@ -9,7 +9,7 @@ import NativeLogo from "../img/NativeLogo.jpg";
 import GitLogo from "../img/GitLogo.png";
 import NodeLogo from "../img/NodeLogo.png";
 import MongoLogo from "../img/MongoLogo.png";
-import Map from "../img/map.PNG";
+import Map from "../img/map.png";
 
 class Introduction extends React.Component {
   state = {
@@ -166,12 +166,21 @@ class Introduction extends React.Component {
   };
 
   render() {
-    const cube = logo => (
+    const cube = (logo, name) => (
       <div className="cube-holder">
         <div className="scene">
           <div className="cube show-back">
             <div className="cube__face cube__face--front">
-              <img src={logo} alt="javascript logo" />
+              <img
+                src={logo}
+                alt="logo"
+                onClick={() => {
+                  if (name) {
+                    sessionStorage.setItem("scrollTo", name);
+                    window.location = "/skills";
+                  }
+                }}
+              />
             </div>
             <div className="cube__face cube__face--back" />
             <div className="cube__face cube__face--right" />
@@ -214,14 +223,14 @@ class Introduction extends React.Component {
         </div>
         <section className="technologies">
           <div className="cubes-holder">
-            {cube(JavaScriptLogo)}
-            {cube(ReactLogo)}
-            {cube(NativeLogo)}
-            {cube(ReduxLogo)}
-            {cube(GimpLogo)}
-            {cube(NodeLogo)}
-            {cube(MongoLogo)}
-            {cube(GitLogo)}
+            {cube(JavaScriptLogo, "javascript")}
+            {cube(ReactLogo, "react")}
+            {cube(NativeLogo, "react")}
+            {cube(ReduxLogo, "react")}
+            {cube(GimpLogo, "gimp")}
+            {cube(NodeLogo, "node")}
+            {cube(MongoLogo, "mongodb")}
+            {cube(GitLogo, "git")}
           </div>
         </section>
         <section className="map">

@@ -10,8 +10,6 @@ class LoadingScreen extends React.Component {
       document.body.classList.add("stop-scrolling");
 
       // inicialization
-      const wrapper = document.querySelector("div.wrap");
-
       // array for squares
       let squaresArray = [];
 

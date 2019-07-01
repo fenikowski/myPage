@@ -7,7 +7,6 @@ section.introduction {
   height: 100vh;
   width: 100%;
   background-color: #fff;
-  /* border: 5px green solid; */
   z-index: -1;
 }
 
@@ -176,10 +175,9 @@ div.section-title p {
 
 section.technologies {
   position: relative;
-  height: 120vh;
+  height: 100vh;
   width: 100%;
   background-color: #000;
-  /* border: 5px green solid; */
 }
 
 div.cubes-holder {
@@ -207,7 +205,6 @@ div.cube-holder {
   width: var(--cube-size);
   height: var(--cube-size);
   border: 1px solid #ccc;
-  /* margin: 60px; */
   perspective: calc(var(--cube-size) * 2);
 }
 
@@ -261,6 +258,7 @@ div.cube-holder {
   left: 50%;
   transform: translate(-50%, -50%);
   height: 80%;
+  transition: 0.2s;
 }
 
 .cube__face--right {
@@ -298,6 +296,13 @@ div.cube-holder {
   transform: rotateX(-90deg) translateZ(calc(var(--cube-size) / (2)));
 }
 
+div.scene:hover {
+  cursor: pointer;
+}
+div.scene:hover div.cube img {
+  height: 100%;
+}
+
 /* section map */
 
 section.map {
@@ -316,11 +321,11 @@ section.map img {
   left: 50%;
   transform: translate(-50%, -50%);
   filter: grayscale(0.5) brightness(0.7);
-  transition: 0.7s;
+  transition: 2s 0.7s;
 }
 
 section.map img.active {
-  width: 120%;
+  width: 300%;
   filter: grayscale(0.5) brightness(0.4) contrast(1.3) blur(4px);
 }
 

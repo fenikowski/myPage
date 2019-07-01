@@ -52,6 +52,28 @@ nav.main-navigation {
   }
 }
 
+@media (max-width: 376px) and (orientation: portrait) {
+  nav.main-navigation {
+    height: 5vh;
+    top: 8px;
+    /* left: 10px; */
+  }
+  .main-navigation ul li {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 360px) and (orientation: portrait) {
+  nav.main-navigation {
+    height: 5vh;
+    top: 10px;
+    left: 10px;
+  }
+  .main-navigation ul li {
+    font-size: 16px;
+  }
+}
+
 @media (max-width: 900px) and (orientation: landscape) {
   nav.main-navigation {
     height: 5vh;

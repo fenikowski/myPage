@@ -51,18 +51,14 @@ class Contact extends React.Component {
   };
 
   handleClick = () => {
-    // fs.appendFile(
-    //   "../message.json",
-    //   JSON.stringify({
-    //     author: this.state.userName,
-    //     email: this.state.email,
-    //     message: this.state.message
-    //   }),
-    //   err => {
-    //     if (err) throw err;
-    //     console.log("The message has been sent to the server!");
-    //   }
-    // );
+    const link =
+      "mailto:fenikowski@gmail.com" +
+      `?cc=${this.state.email}` +
+      "&subject=" +
+      escape(this.state.userName) +
+      "&body=" +
+      escape(this.state.message);
+    window.location.href = link;
 
     this.setState({
       userName: "",
