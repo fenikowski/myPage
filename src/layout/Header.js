@@ -17,7 +17,9 @@ const Header = props => {
         />
         <Route
           path="/skills"
-          render={() => <HeaderSkills language={props.language} />}
+          render={() => (
+            <HeaderSkills language={props.language} mobile={props.mobile} />
+          )}
         />
         <Route
           path="/contact"

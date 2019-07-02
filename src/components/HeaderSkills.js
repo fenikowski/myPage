@@ -166,7 +166,12 @@ class HeaderProjects extends React.Component {
     setTimeout(() => {
       ballStage.remove();
     }, size * 1000);
-    setTimeout(this.createBall, Math.floor(Math.random() * 10) * 100);
+
+    if (this.props.mobile) {
+      setTimeout(this.createBall, Math.floor(Math.random() * 10) * 200);
+    } else {
+      setTimeout(this.createBall, Math.floor(Math.random() * 10) * 100);
+    }
   };
 
   componentWillUnmount() {
@@ -181,9 +186,9 @@ class HeaderProjects extends React.Component {
         <div className="background-abilities">
           <img src={this.state.backgroundImage} alt="" />
           <img src={this.state.trees} alt="" />
+          <h1 className="name skills">Skills</h1>
+          <h2 className="specialty skills">Sección en desarrollo</h2>
         </div>
-        <h1 className="name">Skills</h1>
-        <h2 className="specialty">Sección en desarrollo</h2>
       </>
     );
   }
