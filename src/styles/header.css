@@ -578,6 +578,10 @@ h2.juegos span {
     white-space: normal;
   }
 
+  h2.specialty.skills {
+    transform: translate(40px, 140px);
+  }
+
   h1.name.contact {
     font-size: 80px;
   }
