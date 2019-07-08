@@ -66,6 +66,10 @@ div.square.disappear {
 
 div.loading {
   position: absolute;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 30vw;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -100%);
@@ -78,6 +82,21 @@ div.loading {
   transition: 0.5s;
 }
 
+@keyframes letters {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(0, -50%);
+  }
+  20% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
 div.loadingAnimation {
   position: absolute;
   height: 5vh;
@@ -85,7 +104,7 @@ div.loadingAnimation {
   top: 50%;
   left: 50%;
   transform: translate(-55%, 20%);
-  background-image: url(../img/loading.gif);
+  /* background-image: url(../img/loading.gif); */
   background-size: cover;
   transition: 0.5s;
 }

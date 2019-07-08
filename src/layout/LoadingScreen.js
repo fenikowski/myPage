@@ -10,6 +10,10 @@ class LoadingScreen extends React.Component {
       document.body.classList.add("stop-scrolling");
 
       // inicialization
+
+      // loading text animation
+      this.loadingAnimation();
+
       // array for squares
       let squaresArray = [];
 
@@ -43,9 +47,9 @@ class LoadingScreen extends React.Component {
       function whenPageLoaded() {
         sessionStorage.setItem("pageLoaded", true);
 
-        document
-          .querySelector("div.loadingScreen")
-          .removeChild(document.querySelector("div.loadingAnimation"));
+        // document
+        //   .querySelector("div.loadingScreen")
+        //   .removeChild(document.querySelector("div.loadingAnimation"));
         document.querySelector("div.loading").textContent =
           "CLICK ON THE SCREEN";
         document.querySelector("div.loading").style.animation =
@@ -155,14 +159,28 @@ class LoadingScreen extends React.Component {
     }
   }
 
+  loadingAnimation = () => {
+    const textContener = document.querySelector("div.loading");
+    const text = "Loading";
+    for (let i = 0; i <= text.length; i++) {
+      const letter = document.createElement("div");
+      letter.textContent = text[i];
+      textContener.appendChild(letter);
+
+      setTimeout(() => {
+        letter.style.animation = "letters 2s ease infinite";
+      }, i * 300);
+    }
+  };
+
   render() {
     return (
       <div className="wrap">
         <div className="loadingScreen">
           <div className="gradient" />
           <div className="squares" />
-          <div className="loading">Loading</div>
-          <div className="loadingAnimation" />
+          <div className="loading" />
+          {/* <div className="loadingAnimation" /> */}
         </div>
       </div>
     );
