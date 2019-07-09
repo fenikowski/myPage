@@ -25,17 +25,33 @@ export default {
       technologies:
         "Uso tecnologías más recientes para crear aplicaciones web modernas",
       actualInfo:
-        "Actualmente vivo en Valéncia donde vine hace dos años para acabar mis estudios y me decidí por quedar. Sigo buscando ofertas de trabajo, si estás interesado, escríbeme en sección "
+        "Actualmente vivo en Valéncia adonde llegué hace dos años para acabar mis estudios y me decidí por quedar. Sigo buscando ofertas de trabajo, si estás interesado, escríbeme en sección "
     },
+    skills: [
+      {
+        description: `JavaScript es un lenguaje bastante fresco, pero va creciendo, despertando mucha esperanza para el futuro. Yo lo uso creando tanto front-end de aplicaciónes como el back-end. Utilizandolo y su objetividad escribí unos juegos que encontrarás en otra sección de esta página.`
+      },
+      {
+        description: `Gimp es mi herramienta de edición gráfica preferida. La uso para enfrentar los obstaculos sencillos en trabajo de cada front-end developer, dicho, editar imagenes y crear animaciones de sitios web y juegos.`
+      },
+      {
+        description: `Mi trabajo en JavaScript complemento con el framework muy al tanto de producción de Facebook. Gracias a él, surgió esta página, su codigo puedes revisar en mi cuenta de GitHub o pulsando `,
+        linkName: "aquí"
+      },
+      {
+        description: `En mi trabajo utilizo Git, el sístema de control de versión más popular del mundo. Todo el codigo que cometos, de esta página así mismo como los juegos y proyectos encontrarás en mi cuenta de GitHub, pulsando `,
+        linkName: "aquí"
+      }
+    ],
     games: [
       {
-        h3: `Es un juego, es un clásico, todo el mundo conoce las historias de
+        h3: `Este juegón, es un clásico, todo el mundo conoce las historias de
                 Mario, ¿pero si conoce de la misma manera las batallas por
                 galletas, de una patata valiente?`,
         p: `Creo que no hay mejor manera de aprender que praticar y por tanto
                 no puede exisitir una manera mejor de aprender programación que
                 escribir juegos. Así surgió el tercer juego del universo de la
-                Patata, que la mete a ella en el mundo de dos dimensiones, donde
+                Patata, que la mete en el mundo de dos dimensiones, donde
                 tiene que luchar para llenar su estómago de galletas deliciosas.
                 ¿Le ayudas?`,
         description: {
@@ -55,14 +71,14 @@ export default {
       },
       {
         h3: `Siguiente clásico, un recurdo de infancia y horas pasadas jugandolo en la famosa Nokia 6310i.`,
-        p: `Es el segundo juego del mundo de la Patata, para devorar aun más
+        p: `Es el segundo juego del mundo de la Patata. ¿Su objetivo? Devorar aun más
                 galletas, ¡la Patata se transforma en una serpente! Fue un paso
                 adelante en mi desarrollo y las primeras horas de frustración y
                 impotencia, que despúes se volvieron en horas de afán y al acabar,
-                la satisfacción infinita.`,
+                la satisfacción infinita. ¡Prúebalo!`,
         description: {
           one: `El juego está escrito en puro JavaScript (ES6)`,
-          two: ` Versión actual funciona en todos navegadores populares y
+          two: `Versión actual funciona en todos navegadores populares y
                     moviles.`,
           three: `El juego está escrito por mi (Igor Fenikowski), sin embargo
                     contiene imagenes y sonidos de licencia 'open source'. El uso no
@@ -127,12 +143,28 @@ export default {
       contact: "Contact"
     },
     introduction: {
-      text: `Hey, welcome to my page! I'm Igor Fenikowski, a student recently graduated from the Univeristy of Warsaw. I create web aplications using the newest technologies and popular frameworks. On this site you will find informations about me, my skills and games I made. As well you can contact me here and revise my code. I'm glad you decided to take a look here.`,
+      text: `Hey, welcome to my page! I'm Igor Fenikowski, a student, recently graduated from the Univeristy of Warsaw. I create web aplications using modern technologies and popular frameworks. On this site, you will find informations about me, my skills and games I made. Likewise you can contact me here and revise my code. I'm glad you decided to take a look here.`,
       technologies:
         "I use most recent technologies to create modern web aplicacions",
       actualInfo:
         "Currently I live in Valencia where I came two years ago to complete my studies and I decided to stay. I'm searching for job offers, if you're interested in cooperation, write me in section "
     },
+    skills: [
+      {
+        description: `JavaScript is a fresh and exciting language, which is growing providing more and more tools and posibilities for development of modern aplications. I use it creating front-end as well as back-end of my aplications. Taking advantage of it and it's object oriented programming I wrote few games which you'll find in other section.`
+      },
+      {
+        description: `Gimp is my prefered graphic editor, which helps my embrace simple tasks confronting every Front-end developer. I use to create images and animations for my websites and games alike.`
+      },
+      {
+        description: `My JavaScript written projects I complement with modern, up-to-date framework from Facebook production. Basing on it, surged this page, its code is avaiable to check out on my GitHub account `,
+        linkName: "here"
+      },
+      {
+        description: `In my work I use Git, the most popular verison control system. All the code I commit, of this page as well as the games and projects, you'll find en my GitHub account, clicking `,
+        linkName: "here"
+      }
+    ],
     games: [
       {
         h3: `It's a game, a classic, all the world knows the stories of Mario, but does it know the battles for cookies of a brave potato?`,
