@@ -55,7 +55,8 @@ class Introduction extends React.Component {
   handleScroll = () => {
     if (
       window.scrollY + window.innerHeight >
-        document.querySelector("section.introduction").offsetTop &&
+        document.querySelector("section.introduction").offsetTop +
+          document.querySelector("section.introduction").offsetHeight / 2 &&
       this.state.photoClass === ""
     ) {
       this.addLetter();
