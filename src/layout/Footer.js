@@ -22,7 +22,7 @@ const Footer = props => {
         {text.localization}
         <Route path="/" exact render={props => location()} />
         <Route path="/skills" exact render={props => location()} />
-        <Route path="/juegos" exact render={props => location()} />
+        <Route path="/games" exact render={props => location()} />
         <Route path="/contact" exact render={props => location()} />
       </div>
       <div className="author">
