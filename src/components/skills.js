@@ -1,10 +1,8 @@
 import React from "react";
 import "../styles/skills.css";
 import JavaScriptLogo from "../img/javaScriptLogo.png";
-import ReduxLogo from "../img/ReduxLogo.png";
 import GimpLogo from "../img/GimpLogo.png";
 import ReactLogo from "../img/ReactLogo.png";
-import NativeLogo from "../img/NativeLogo.jpg";
 import GitLogo from "../img/GitLogo.png";
 import NodeLogo from "../img/NodeLogo.png";
 import MongoLogo from "../img/MongoLogo.png";
@@ -12,6 +10,7 @@ import JavaScriptScreen from "../img/JavaScriptScreen.PNG";
 import GimpGif from "../img/yummy.gif";
 import GitScreen from "../img/GitScreen.PNG";
 import ReactScreen from "../img/ReactScreen.jpeg";
+import Data from "../text";
 
 class Skills extends React.Component {
   state = {};
@@ -33,6 +32,13 @@ class Skills extends React.Component {
   };
 
   render() {
+    let text = "";
+    if (this.props.language === "es") {
+      text = Data.es.skills;
+    } else if (this.props.language === "en") {
+      text = Data.en.skills;
+    }
+
     return (
       <section className="skills">
         <div className="skill javascript">
@@ -43,12 +49,7 @@ class Skills extends React.Component {
           <div className="skill-content">
             <img src={JavaScriptScreen} alt="javascript screenshot" />
             <div className="skill-description">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Temporibus, beatae odit minus perferendis explicabo
-                reprehenderit fuga deleniti mollitia dolore iste, obcaecati,
-                cumque nemo voluptas? Facere odio suscipit tenetur! Sint, rerum.
-              </p>
+              <p>{text[0].description}</p>
             </div>
           </div>
         </div>
@@ -60,12 +61,7 @@ class Skills extends React.Component {
           <div className="skill-content">
             <img src={GimpGif} alt="javascript screenshot" />
             <div className="skill-description">
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Provident odio laborum architecto sint! Aliquam quo minima
-                perspiciatis perferendis eligendi, corporis earum delectus
-                debitis. Aut pariatur aliquid molestias maiores ex repudiandae!
-              </p>
+              <p>{text[1].description}</p>
             </div>
           </div>
         </div>
@@ -78,10 +74,11 @@ class Skills extends React.Component {
             <img src={ReactScreen} alt="react screenshot" />
             <div className="skill-description">
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Quisquam voluptatem tempora voluptatum eius repellendus porro
-                hic sint repellat dolor vitae eveniet ipsam earum ex ducimus qui
-                veniam, nemo quasi nostrum.
+                {text[2].description}{" "}
+                <a href="https://github.com/fenikowski/myPage">
+                  {text[2].linkName}
+                </a>
+                .
               </p>
             </div>
           </div>
@@ -91,7 +88,7 @@ class Skills extends React.Component {
             <img src={NodeLogo} alt="logo node" />
             <p>Node Js</p>
           </div>
-          <div className="skill-content">contenido</div>
+          <div className="skill-content">lorem</div>
         </div>
         <div className="skill mongodb">
           <div className="skill-header">
@@ -109,10 +106,8 @@ class Skills extends React.Component {
             <img src={GitScreen} alt="git screenshot" />
             <div className="skill-description">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
-                exercitationem, excepturi ut tempore, dignissimos nam saepe vel
-                possimus provident officia quos debitis, dicta accusamus
-                architecto fugit illum soluta dolore totam.
+                {text[3].description}{" "}
+                <a href="https://github.com/fenikowski">{text[3].linkName}</a>.
               </p>
             </div>
           </div>
