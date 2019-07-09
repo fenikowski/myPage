@@ -166,10 +166,7 @@ class LoadingScreen extends React.Component {
       const letter = document.createElement("div");
       letter.textContent = text[i];
       textContener.appendChild(letter);
-
-      setTimeout(() => {
-        letter.style.animation = "letters 2s ease infinite";
-      }, i * 300);
+      letter.style.animation = `letters 2s ${i * 0.3}s ease infinite`;
     }
   };
 
