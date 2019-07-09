@@ -18,7 +18,7 @@ section.juegos {
   color: rgb(192, 194, 233);
   text-shadow: 1px 0 2px black;
   box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.658);
-  border-radius: 25px;
+  border-radius: 5px;
   z-index: 1;
   overflow: hidden;
 }
