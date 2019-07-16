@@ -11,6 +11,7 @@ import NodeLogo from "../img/NodeLogo.png";
 import MongoLogo from "../img/MongoLogo.png";
 import CSSLogo from "../img/CSSLogo.png";
 import HTMLLogo from "../img/HTMLLogo.png";
+import "../styles/abilities-header.css";
 
 class HeaderProjects extends React.Component {
   state = {

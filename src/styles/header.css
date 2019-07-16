@@ -1,176 +1,16 @@
-div.background-wrapper {
-  width: 100%;
-  height: 900px;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-  background-color: rgb(192, 191, 223);
-  z-index: 1;
-  overflow: hidden;
-}
-
-div.background-games {
-  width: 100%;
-  height: 900px;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-}
-
-div.background-abilities {
-  width: 100%;
-  height: 900px;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-}
-
-div.background-abilities img:nth-of-type(1) {
-  position: fixed;
-  z-index: -6;
-  width: 100%;
-}
-div.background-abilities img:nth-of-type(2) {
-  width: 100%;
-  position: absolute;
-  z-index: -5;
-}
-
-/* balls */
-.ball-stage {
-  position: absolute;
-  top: -15vh;
-  display: inline-block;
-  perspective: 1200px;
-  perspective-origin: 50% 50%;
-  opacity: 0.8;
-  cursor: pointer;
-}
-
-@keyframes falling {
-  0% {
-    top: -15vh;
-  }
-  100% {
-    top: 100%;
-  }
-}
-
-.ball {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  border-radius: 50%;
-  position: relative;
-  background: radial-gradient(
-    circle at 50% 120%,
-    #362f57,
-    #252c4b 10%,
-    #032c50 80%,
-    #04182b 100%
-  );
-}
-
-.ball-image {
-  width: 55%;
-  height: 55%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: 0.2s;
-}
-
-.ball:hover .ball-image {
-  width: 60%;
-  height: 60%;
-}
-.ball-stage:hover .ball-image {
-  width: 60%;
-  height: 60%;
-}
-.ball-image:hover {
-  width: 60%;
-  height: 60%;
-}
-
-.ball:before:hover {
-  width: 60%;
-  height: 60%;
-}
-
-.ball:before {
-  content: "";
-  position: absolute;
-  top: 1%;
-  left: 5%;
-  width: 90%;
-  height: 90%;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle at 50% 0px,
-    #ffffff,
-    rgba(255, 255, 255, 0) 58%
-  );
-  filter: blur(5px);
-  z-index: 2;
-  opacity: 0.5;
-}
-
-div.background-contact {
-  width: 100%;
-  height: 900px;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-}
-
-div.background-contact img {
-  animation: sunset 30s infinite;
-}
-
-@keyframes sunset {
-  0% {
-    filter: brightness(100%);
-  }
-  50% {
-    filter: brightness(35%) contrast(150%);
-  }
-  100% {
-    filter: brightness(100%);
-  }
-}
-
-div.background-games img {
-  position: absolute;
-  width: 100%;
-  z-index: 1;
-}
-
 h1.name {
   position: absolute;
   z-index: 4;
   text-transform: uppercase;
-  font-size: 130px;
-  top: 170px;
+  font-size: 17vh;
+  top: 17vh;
   left: -850px;
   font-weight: 600;
   letter-spacing: 4px;
-  /* docelowa pozycja to left 40px */
   animation: animationh1 60s 1 forwards linear;
-  /* cubic-bezier(0, 1.84, 0.41, 0.8) */
   text-shadow: 4px 2px lightgray;
   color: white;
   white-space: nowrap;
-}
-
-h1.juegos {
-  top: 30px;
-  color: #9643c9;
-  text-shadow: 4px 2px white;
 }
 
 @keyframes animationh1 {
@@ -198,8 +38,8 @@ h2.specialty {
   position: absolute;
   z-index: 6;
   text-transform: uppercase;
-  font-size: 80px;
-  top: 323px;
+  font-size: 11vh;
+  top: 38vh;
   left: 207px;
   font-weight: 500;
   animation: animationh2 60s 1 forwards linear;
@@ -208,12 +48,6 @@ h2.specialty {
   text-shadow: 2px 1px lightgray;
   color: white;
   white-space: nowrap;
-}
-
-h2.juegos {
-  top: 180px;
-  color: #9643c9;
-  text-shadow: 2px 1px white;
 }
 
 @keyframes animationh2 {
@@ -238,182 +72,17 @@ h2.juegos {
   }
 }
 
-h2.juegos span {
-  animation: miganie 0.8s 5;
-}
-
-@keyframes miganie {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.bgc1 {
-  position: absolute;
-  width: 100%;
-  z-index: 1;
-}
-
-.bgc2 {
-  width: 100%;
-  position: absolute;
-  left: -43px;
-  top: 77px;
-  z-index: 3;
-}
-
-.bgc3 {
-  width: 100%;
-  position: absolute;
-  left: -23px;
-  top: 270px;
-  z-index: 5;
-}
-
-.bgc4 {
-  width: 100%;
-  position: absolute;
-  left: -19px;
-  top: 269px;
-  z-index: 7;
-}
-
-.bgc5 {
-  width: 100%;
-  position: absolute;
-  left: 11px;
-  top: 243px;
-  z-index: 9;
-}
-
 @media (max-width: 1200px) and (orientation: portrait) {
-  div.background-wrapper {
-    height: 100vh;
-  }
-
-  div.background-games {
-    height: 100vh;
-  }
-
-  div.background-games img {
-    width: initial;
-    height: 100%;
-    transform: translate(-10%);
-  }
-
-  div.background-abilities {
-    height: 100vh;
-  }
-
-  div.background-abilities img:nth-of-type(1) {
-    height: 100%;
-    width: unset;
-  }
-  div.background-abilities img:nth-of-type(2) {
-    height: 100%;
-    width: unset;
-  }
-
-  h1.name.juegos {
-    font-size: 130px;
-    transform: translate(0, 5vh);
-  }
-
-  h2.specialty.juegos {
-    font-size: 70px;
-    transform: translate(-250px, 7vh);
-    word-wrap: break-word;
-    /* width: 200px; */
-    /* white-space: normal; */
-  }
-
-  h2.specialty.contact {
-    font-size: 80px;
-    transform: translate(-200px, 5vh);
-    word-wrap: break-word;
-    /* width: 200px; */
-    /* white-space: normal; */
-  }
-
-  .bgc1 {
-    height: 100vh;
-    width: 130vh;
-  }
-  .bgc2 {
-    height: 100vh;
-    width: 130vh;
-    transform: translate(-7px);
-  }
-  .bgc3 {
-    height: 100vh;
-    width: 130vh;
-  }
-  .bgc4 {
-    height: 100vh;
-    width: 130vh;
-    transform: translate(-2px);
-  }
-  .bgc5 {
-    height: 100vh;
-    width: 130vh;
-    transform: translate(-9px);
-  }
-
-  .name {
-    transform: translate(-3vw, 3vh);
-  }
-
-  .specialty {
-    transform: translate(-15vw, 3vh);
-  }
-
-  div.background-contact {
-    height: 100vh;
-  }
-
-  div.background-contact img {
-    height: 100vh;
-  }
-
-  h1.name.contact {
-    text-align: center;
-    top: 20vh;
-    width: 100%;
-    left: 0vw;
-    transform: none;
-    animation: none;
-    font-size: 150px;
-  }
-
-  h2.specialty.contact {
-    font-size: 120px;
-    white-space: normal;
-    width: 100%;
-    animation: none;
-    text-align: center;
-    top: 35vh;
-    left: 0;
-    transform: none;
-  }
-}
-
-@media (max-width: 1100px) and (orientation: portrait) {
   h1.name {
     font-size: 110px;
-    transform: translate(-3vw, 0vh);
   }
 
   h2.specialty {
     font-size: 70px;
-    transform: translate(-10vw, 0vh);
+    transform: translate(-10vw, -8vh);
   }
 }
+
 @media (max-width: 900px) and (orientation: portrait) {
   h1.name {
     font-size: 100px;
@@ -422,7 +91,7 @@ h2.juegos span {
 
   h2.specialty {
     font-size: 60px;
-    transform: translate(-30vw, -2vh);
+    transform: translate(-30vw, -8vh);
   }
 
   @keyframes animationh1 {
@@ -467,85 +136,12 @@ h2.juegos span {
       left: 300px;
     }
   }
-
-  h1.name.juegos {
-    font-size: 140px;
-    transform: translate(0, 8vh);
-  }
-
-  h2.specialty.juegos {
-    text-align: center;
-    font-size: 55px;
-    transform: translate(185px, 24vh);
-    word-wrap: break-word;
-    width: 400px;
-    white-space: normal;
-    animation: none;
-  }
-
-  h1.name.contact {
-    text-align: center;
-    top: 20vh;
-    width: 100%;
-    left: 0vw;
-    transform: none;
-    animation: none;
-  }
-
-  h2.specialty.contact {
-    font-size: 80px;
-    white-space: normal;
-    width: 100%;
-    animation: none;
-    text-align: center;
-    top: 40vh;
-  }
 }
 
 @media (max-width: 420px) and (orientation: portrait) {
   body {
     width: 100vw;
     overflow: hidden;
-  }
-
-  div.background-wrapper {
-    height: 111vh;
-    width: 100%;
-    overflow: hidden;
-  }
-
-  div.background-games {
-    height: 100vh;
-  }
-  div.background-contact {
-    height: 100vh;
-  }
-
-  div.background-games img {
-    width: initial;
-    height: 100%;
-    transform: translate(-20%);
-  }
-
-  .bgc1 {
-    height: 100vh;
-    width: 180vh;
-  }
-  .bgc2 {
-    height: 100vh;
-    width: 180vh;
-  }
-  .bgc3 {
-    height: 100vh;
-    width: 180vh;
-  }
-  .bgc4 {
-    height: 100vh;
-    width: 180vh;
-  }
-  .bgc5 {
-    height: 100vh;
-    width: 180vh;
   }
 
   h1.name {
@@ -560,41 +156,8 @@ h2.juegos span {
     font-size: 35px;
     top: 30px;
     left: 30px;
-    transform: translate(0, -90px);
+    transform: translate(3vh, -12vh);
     animation: none;
-  }
-
-  h1.name.juegos {
-    font-size: 90px;
-    transform: translate(20px, -5px);
-  }
-
-  h2.specialty.juegos {
-    text-align: center;
-    font-size: 35px;
-    transform: translate(170px, 38vh);
-    word-wrap: break-word;
-    width: 200px;
-    white-space: normal;
-  }
-
-  h2.specialty.skills {
-    transform: translate(40px, 140px);
-  }
-
-  h1.name.contact {
-    font-size: 80px;
-  }
-
-  h2.specialty.contact {
-    font-size: 60px;
-    transform: translate(-10px, -5vh);
-  }
-}
-
-@media (max-width: 420px) and (max-height: 600px) and (orientation: portrait) {
-  .bgc3 {
-    transform: translate(0, -5vh);
   }
 }
 
@@ -609,32 +172,11 @@ h2.juegos span {
     text-align: center;
     font-size: 35px;
     top: 30px;
-    left: 20px;
-  }
-
-  h2.specialty.juegos {
-    font-size: 30px;
-    transform: translate(170px, 40vh);
-    word-wrap: break-word;
-    width: 180px;
-    white-space: normal;
-  }
-
-  h1.name.contact {
-    font-size: 80px;
-  }
-
-  h2.specialty.contact {
-    font-size: 60px;
-    transform: translate(-10px, -5vh);
+    left: -10px;
   }
 }
 
 @media (max-width: 374px) and (orientation: portrait) {
-  .bgc3 {
-    transform: translate(0, -2vh);
-  }
-
   h1.name {
     font-size: 40px;
     top: 100px;
@@ -646,15 +188,7 @@ h2.juegos span {
     font-size: 30px;
     top: 30px;
     left: 25px;
-    transform: translate(0px, -100px);
-  }
-
-  h1.name.juegos {
-    transform: translate(20px, -35px);
-  }
-
-  h2.specialty.juegos {
-    transform: translate(150px, 37vh);
+    transform: translate(0px, -80px);
   }
 }
 
@@ -664,82 +198,17 @@ h2.juegos span {
   }
 
   h2.specialty {
-    left: 15px;
-  }
-
-  h2.specialty.contact {
-    transform: translate(0px, 0vh);
-    font-size: 55px;
-  }
-  h2.specialty.juegos {
-    transform: translate(120px, 35vh);
-  }
-}
-
-@media (max-width: 359px) and (max-height: 570px) and (orientation: portrait) {
-  .bgc3 {
-    transform: translate(0, -5vh);
+    transform: translate(0px, -60px);
   }
 }
 
 @media (max-width: 1400px) and (orientation: landscape) {
-  div.background-wrapper {
-    height: 100vh;
-  }
-
-  div.background-games {
-    height: 100vh;
-  }
-
-  div.background-games img {
-    height: 100%;
-  }
-
-  div.background-abilities {
-    height: 100vh;
-    width: 100%;
-  }
-
-  div.background-abilities img:nth-of-type(1) {
-    height: 100%;
-    width: 100%;
-  }
-  div.background-abilities img:nth-of-type(2) {
-    height: 100%;
-    width: 100%;
-  }
-
-  div.background-contact {
-    height: 100vh;
-  }
-
-  div.background-contact img {
-    height: 100%;
-    width: 100%;
-  }
-
-  .bgc1 {
-    height: 100vh;
-  }
-  .bgc2 {
-    height: 100vh;
-  }
-  .bgc3 {
-    height: 100vh;
-  }
-  .bgc4 {
-    height: 100vh;
-  }
-  .bgc5 {
-    height: 100vh;
-  }
-
   h1.name {
     transform: translate(0, 3vh);
   }
 
   h2.specialty {
-    transform: translate(0, 3vh);
+    transform: translate(-10vh, 3vh);
   }
 }
 
@@ -752,182 +221,46 @@ h2.juegos span {
     font-size: 70px;
     transform: translate(-10vw, 2vh);
   }
-
-  h1.name.juegos {
-    font-size: 100px;
-    transform: translate(0, 4vh);
-  }
-
-  h2.specialty.juegos {
-    transform: translate(-20vw, 1vh);
-    font-size: 60px;
-  }
 }
 
 @media (max-width: 900px) and (orientation: landscape) {
   h1.name {
     font-size: 70px;
-    transform: translate(0vw, -20vh);
+    transform: translate(0vw, 0vh);
   }
 
   h2.specialty {
     font-size: 50px;
-    transform: translate(-18vw, -37vh);
-  }
-
-  h1.name.juegos {
-    font-size: 80px;
-    transform: translate(110vw, 0vh);
-    animation: none;
-  }
-
-  h2.specialty.juegos {
-    transform: translate(15vw, -10vh);
-    font-size: 50px;
-    width: 50vw;
-    white-space: normal;
-    animation: none;
-  }
-  h1.name.contact {
-    transform: translate(0vw, -25vh);
-  }
-  h2.specialty.contact {
-    font-size: 50px;
-    transform: translate(-18vw, -36vh);
-  }
-
-  .bgc3 {
-    transform: translate(0, -22vh);
-  }
-  .bgc4 {
-    transform: translate(0, -22vh);
-  }
-  .bgc5 {
-    transform: translate(0, -22vh);
+    transform: translate(-10vw, 2vh);
   }
 }
 
 @media (max-width: 800px) and (orientation: landscape) {
   h1.name {
     font-size: 65px;
-    transform: translate(0vw, -15vh);
   }
 
   h2.specialty {
     font-size: 50px;
-    transform: translate(-30vw, -32vh);
-  }
-
-  h1.name.juegos {
-    font-size: 80px;
-    transform: translate(120vw, 0vh);
-    animation: none;
-  }
-
-  h2.specialty.juegos {
-    transform: translate(15vw, -10vh);
-    font-size: 50px;
-    width: 60vw;
-    white-space: normal;
-    animation: none;
-  }
-
-  h2.specialty.contact {
-    font-size: 50px;
-    transform: translate(-24vw, -36vh);
+    transform: translate(-20vw, 0);
   }
 }
 
 @media (max-width: 700px) and (orientation: landscape) {
   h1.name {
     font-size: 60px;
-    transform: translate(0vw, -20vh);
   }
 
   h2.specialty {
     font-size: 40px;
-    transform: translate(-35vw, -41vh);
-  }
-
-  h1.name.juegos {
-    font-size: 60px;
-    transform: translate(140vw, 2vh);
-    animation: none;
-  }
-
-  h2.specialty.juegos {
-    transform: translate(15vw, -20vh);
-    font-size: 40px;
-    width: 50vw;
-    white-space: normal;
-    animation: none;
-  }
-  h1.name.contact {
-    transform: translate(0vw, -20vh);
-  }
-  h2.specialty.contact {
-    font-size: 50px;
-    transform: translate(-36vw, -36vh);
-  }
-
-  .bgc2 {
-    transform: translate(0, -5vh);
-  }
-
-  .bgc3 {
-    transform: translate(0, -35vh);
-  }
-  .bgc4 {
-    transform: translate(0, -35vh);
-  }
-  .bgc5 {
-    transform: translate(0, -35vh);
   }
 }
 @media (max-width: 600px) and (orientation: landscape) {
   h1.name {
     font-size: 50px;
-    transform: translate(0vw, -20vh);
   }
 
   h2.specialty {
     font-size: 35px;
-    transform: translate(-35vw, -50vh);
-  }
-
-  h1.name.juegos {
-    font-size: 50px;
-    transform: translate(160vw, 2vh);
-    animation: none;
-  }
-
-  h2.specialty.juegos {
-    transform: translate(10vw, -20vh);
-    font-size: 35px;
-    width: 50vw;
-    white-space: normal;
-    animation: none;
-  }
-  h1.name.contact {
-    font-size: 45px;
-    transform: translate(0vw, -20vh);
-  }
-  h2.specialty.contact {
-    font-size: 35px;
-    transform: translate(-36vw, -48vh);
-  }
-
-  .bgc2 {
-    transform: translate(0, -5vh);
-  }
-
-  .bgc3 {
-    transform: translate(0, -35vh);
-  }
-  .bgc4 {
-    transform: translate(0, -35vh);
-  }
-  .bgc5 {
-    transform: translate(0, -35vh);
   }
 }

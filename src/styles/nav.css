@@ -34,7 +34,7 @@ nav.main-navigation {
 .main-navigation ul li a {
   text-decoration: none;
   color: black;
-  transition: 0.2s;
+  transition: 0.3s;
 }
 
 .main-navigation ul li a.active {
@@ -84,9 +84,9 @@ nav.main-navigation {
   nav.main-navigation {
     height: 5vh;
     top: 8px;
-    left: 10px;
   }
   .main-navigation ul li {
     font-size: 20px;
+    margin-left: 2vw;
   }
 }

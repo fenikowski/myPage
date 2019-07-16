@@ -4,17 +4,18 @@ import bgc2 from "../img/bgc2.png";
 import bgc3 from "../img/bgc3.png";
 import bgc4 from "../img/bgc4.png";
 import bgc5 from "../img/bgc5.png";
+import "../styles/initial-header.css";
 
 class InitialHeader extends React.Component {
   state = {
     bgc1: "0px",
-    bgc2: "77px",
-    bgc3: "270px",
-    bgc4: "269px",
-    bgc5: "243px",
+    bgc2: "0px",
+    bgc3: "0px",
+    bgc4: "0px",
+    bgc5: "0px",
     wrapper: "0px",
-    name: "170px",
-    specialty: "323px"
+    name: "17vh",
+    specialty: "38vh"
   };
 
   componentDidMount = () => {
@@ -23,14 +24,6 @@ class InitialHeader extends React.Component {
       .forEach(a => (a.style.color = "black"));
     document.querySelector("nav.main-navigation div.shadow").style.boxShadow =
       "0 0 10vh 2vh white";
-
-    this.setState({
-      bgc1: "0px",
-      bgc2: "77px",
-      bgc3: "270px",
-      bgc4: "269px",
-      bgc5: "243px"
-    });
 
     window.addEventListener("scroll", this.handleScroll);
   };
@@ -42,12 +35,12 @@ class InitialHeader extends React.Component {
   handleScroll = e => {
     this.setState({
       bgc1: `${0 + window.scrollY / 1}px`,
-      bgc2: `${77 + window.scrollY / 1.35}px`,
-      bgc3: `${270 + window.scrollY / 2.25}px`,
-      bgc4: `${269 + window.scrollY / 3.75}px`,
+      bgc2: `${0 + window.scrollY / 1.35}px`,
+      bgc3: `${0 + window.scrollY / 2.25}px`,
+      bgc4: `${0 + window.scrollY / 3.75}px`,
       // wrapper: `${window.scrollY / 1.5}px`,
-      name: `${170 + window.scrollY / 2}px`,
-      specialty: `${323 + window.scrollY / 2}px`
+      name: `${17 + window.scrollY / 15}vh`,
+      specialty: `${38 + window.scrollY / 15}vh`
     });
   };
 
