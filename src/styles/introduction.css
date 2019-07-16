@@ -54,11 +54,22 @@ div.description {
 
 span.cursor {
   opacity: 0;
-  transition: 0.2s;
+  animation: cursorAnimation 0.8s infinite linear;
 }
 
-span.cursor.active {
-  opacity: 1;
+@keyframes cursorAnimation {
+  0% {
+    opacity: 0;
+  }
+  49% {
+    opacity: 0;
+  }
+  51% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* border */

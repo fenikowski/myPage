@@ -23,7 +23,6 @@ class Introduction extends React.Component {
 
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
-    this.cursorAnimation();
   }
 
   componentWillUnmount = () => {
@@ -90,19 +89,6 @@ class Introduction extends React.Component {
     ) {
       this.mapAnimation();
     }
-  };
-
-  cursorAnimation = () => {
-    if (this.state.cursorClass === "") {
-      this.setState({
-        cursorClass: "active"
-      });
-    } else {
-      this.setState({
-        cursorClass: ""
-      });
-    }
-    setTimeout(this.cursorAnimation.bind(this), 400);
   };
 
   cubeRotation = () => {
