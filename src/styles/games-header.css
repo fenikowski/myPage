@@ -59,7 +59,7 @@ h2.specialty.juegos span {
 
   h2.specialty.juegos {
     font-size: 70px;
-    transform: translate(-250px, 7vh);
+    transform: translate(-250px, 0vh);
     word-wrap: break-word;
     /* width: 200px; */
     /* white-space: normal; */
@@ -96,13 +96,13 @@ h2.specialty.juegos span {
 
   h1.name.juegos {
     font-size: 90px;
-    transform: translate(20px, -5px);
+    transform: translate(20px, 8vh);
   }
 
   h2.specialty.juegos {
     text-align: center;
     font-size: 35px;
-    transform: translate(170px, 38vh);
+    transform: translate(170px, 18vh);
     word-wrap: break-word;
     width: 200px;
     white-space: normal;
@@ -112,7 +112,7 @@ h2.specialty.juegos span {
 @media (max-width: 376px) and (orientation: portrait) {
   h2.specialty.juegos {
     font-size: 30px;
-    transform: translate(170px, 40vh);
+    transform: translate(200px, 20vh);
     word-wrap: break-word;
     width: 180px;
     white-space: normal;
@@ -129,9 +129,13 @@ h2.specialty.juegos span {
   }
 }
 
-@media (max-width: 359px) and (orientation: portrait) {
+@media (max-width: 360px) and (orientation: portrait) {
+  h1.name.juegos {
+    transform: translate(20px, 0px);
+  }
+
   h2.specialty.juegos {
-    transform: translate(120px, 35vh);
+    transform: translate(120px, 18vh);
   }
 }
 

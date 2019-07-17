@@ -12,12 +12,12 @@ section.introduction {
 
 div.profile-photo {
   position: absolute;
-  top: 150px;
-  left: 150px;
-  height: 400px;
-  width: 400px;
-  box-shadow: 0 0 0 7px white, 0 0 0 14px rgba(0, 255, 0, 0.3);
-  border-radius: 200px;
+  top: 20%;
+  left: 11%;
+  height: 60vh;
+  width: 60vh;
+  box-shadow: 0 0 0 1vh white, 0 0 0 2vh rgba(0, 255, 0, 0.3);
+  border-radius: 30vh;
   background-image: url(../img/20190130_225004.jpg);
   background-size: cover;
   z-index: 12;
@@ -32,23 +32,23 @@ div.active-profile-photo {
 
 @keyframes profilePhotoAnimation {
   0% {
-    box-shadow: 0 0 0 7px white, 0 0 0 14px rgba(0, 255, 0, 0.3);
+    box-shadow: 0 0 0 1vh white, 0 0 0 2vh rgba(0, 255, 0, 0.3);
   }
   50% {
-    box-shadow: 0 0 0 20px white, 0 0 0 33px rgba(0, 255, 0, 0.3);
+    box-shadow: 0 0 0 3vh white, 0 0 0 5vh rgba(0, 255, 0, 0.3);
   }
   100% {
-    box-shadow: 0 0 0 7px white, 0 0 0 14px rgba(0, 255, 0, 0.3);
+    box-shadow: 0 0 0 1vh white, 0 0 0 2vh rgba(0, 255, 0, 0.3);
   }
 }
 
 div.description {
-  width: 500px;
-  height: 250px;
   position: absolute;
-  left: 700px;
-  top: 200px;
-  font-size: 26px;
+  width: 60vh;
+  height: 60%;
+  left: 55%;
+  top: 28%;
+  font-size: 3.5vh;
   line-height: 1.4;
 }
 
@@ -171,7 +171,7 @@ div.section-title {
   width: 100%;
   text-align: center;
   line-height: 20vh;
-  font-size: 40px;
+  font-size: 6vh;
   font-weight: 300;
   color: white;
   font-family: "Barlow Condensed";
@@ -347,7 +347,7 @@ section.map p {
   transform: translate(-50%, -50%);
   text-align: center;
   font-weight: 300;
-  font-size: 30px;
+  font-size: 4vh;
   color: white;
   text-shadow: 2px 2px 4px #000;
   opacity: 0;

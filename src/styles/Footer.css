@@ -9,6 +9,7 @@ div.footer {
   line-height: 10vh;
   font-family: "Barlow Condensed";
   font-weight: 500;
+  font-size: 2.65vh;
   color: white;
   z-index: 20;
 }
@@ -26,9 +27,9 @@ div.footer div span {
 div.footer div button {
   display: inline-block;
   position: absolute;
-  width: 40px;
-  height: 40px;
-  border-radius: 40px;
+  width: 5.5vh;
+  height: 5.5vh;
+  border-radius: 5.5vh;
   border: none;
   background-color: #272626;
   overflow: hidden;
@@ -43,8 +44,8 @@ div.footer div button i {
   left: 50%;
   color: #444;
   transform: translate(-50%) rotate(180deg);
-  font-size: 35px;
-  text-shadow: 0 -12px #444, 0 -24px #444;
+  font-size: 5vh;
+  text-shadow: 0 -1.75vh #444, 0 -3.5vh #444;
   animation: btndown 2s linear infinite;
   transition: 1s;
 }
@@ -52,7 +53,7 @@ div.footer div button i {
 div.footer div.go-up button:hover i {
   animation: btndown 1s linear infinite;
   color: #555;
-  text-shadow: 0 -12px #555, 0 -24px #555;
+  text-shadow: 0 -1.75vh #555, 0 -3.5vh #555;
   cursor: pointer;
 }
 

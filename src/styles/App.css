@@ -49,9 +49,9 @@ button.language {
   position: absolute;
   top: 10px;
   left: 10px;
-  height: 20px;
-  width: 28px;
-  background-size: 22px 15px;
+  height: 2.75vh;
+  width: 3.75vh;
+  background-size: 3vh 2vh;
   background-position: center;
   background-repeat: no-repeat;
   background-color: rgba(0, 0, 0, 0);
@@ -72,7 +72,7 @@ button.language:focus {
 }
 
 button.language:nth-of-type(2) {
-  left: 50px;
+  left: 6.5vh;
 }
 
 button.US {

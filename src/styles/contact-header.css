@@ -7,6 +7,7 @@ div.background-contact {
 }
 
 div.background-contact img {
+  height: 100%;
   animation: sunset 30s infinite;
 }
 
