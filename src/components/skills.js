@@ -5,11 +5,12 @@ import GimpLogo from "../img/GimpLogo.png";
 import ReactLogo from "../img/ReactLogo.png";
 import GitLogo from "../img/GitLogo.png";
 import NodeLogo from "../img/NodeLogo.png";
-import MongoLogo from "../img/MongoLogo.png";
+// import MongoLogo from "../img/MongoLogo.png";
 import JavaScriptScreen from "../img/JavaScriptScreen.PNG";
 import GimpGif from "../img/yummy.gif";
 import GitScreen from "../img/GitScreen.PNG";
-import ReactScreen from "../img/ReactScreen.jpeg";
+import ReactScreen from "../img/ReactScreen.png";
+import NodeImage from "../img/nodeImage.jpg";
 import Data from "../text";
 
 class Skills extends React.Component {
@@ -17,6 +18,11 @@ class Skills extends React.Component {
 
   componentDidMount() {
     this.scrollChecking(window.sessionStorage.getItem("scrollTo"));
+    window.addEventListener("scroll", this.skillHeaderOpening);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.skillHeaderOpening);
   }
 
   scrollChecking = scrollTo => {
@@ -31,6 +37,19 @@ class Skills extends React.Component {
     }, 1000);
   };
 
+  skillHeaderOpening = () => {
+    document.querySelectorAll("div.skill-header").forEach(div => {
+      if (
+        window.scrollY + window.innerHeight >
+        div.offsetTop + div.clientHeight
+      ) {
+        div.firstElementChild.style.animation = "skill-open 0.5s forwards";
+      } else if (window.scrollY + window.innerHeight < div.offsetTop) {
+        div.firstElementChild.style.animation = "none";
+      }
+    });
+  };
+
   render() {
     let text = "";
     if (this.props.language === "es") {
@@ -43,6 +62,7 @@ class Skills extends React.Component {
       <section className="skills">
         <div className="skill javascript">
           <div className="skill-header">
+            <div className="skill-gradient" />
             <img src={JavaScriptLogo} alt="logo javascript" />
             <p>JavaScript</p>
           </div>
@@ -55,6 +75,7 @@ class Skills extends React.Component {
         </div>
         <div className="skill gimp">
           <div className="skill-header">
+            <div className="skill-gradient" />
             <img src={GimpLogo} alt="logo gimp" />
             <p>GIMP</p>
           </div>
@@ -67,6 +88,7 @@ class Skills extends React.Component {
         </div>
         <div className="skill react">
           <div className="skill-header">
+            <div className="skill-gradient" />
             <img src={ReactLogo} alt="logo react" />
             <p>React</p>
           </div>
@@ -85,20 +107,39 @@ class Skills extends React.Component {
         </div>
         <div className="skill node">
           <div className="skill-header">
+            <div className="skill-gradient" />
             <img src={NodeLogo} alt="logo node" />
             <p>Node Js</p>
           </div>
-          <div className="skill-content">lorem</div>
+          <div className="skill-content">
+            <img src={NodeImage} alt="react screenshot" />
+            <div className="skill-description">
+              <p>{text[4].description}</p>
+            </div>
+          </div>
         </div>
-        <div className="skill mongodb">
+        {/* <div className="skill mongodb">
           <div className="skill-header">
+            <div className="skill-gradient" />
             <img src={MongoLogo} alt="mongodb node" />
             <p>mongodb</p>
           </div>
-          <div className="skill-content">contenido</div>
-        </div>
+          <div className="skill-content">
+            <img src={ReactScreen} alt="react screenshot" />
+            <div className="skill-description">
+              <p>
+                {text[2].description}{" "}
+                <a href="https://github.com/fenikowski/myPage">
+                  {text[2].linkName}
+                </a>
+                .
+              </p>
+            </div>
+          </div>
+        </div> */}
         <div className="skill git">
           <div className="skill-header">
+            <div className="skill-gradient" />
             <img src={GitLogo} alt="logo git" />
             <p>Git</p>
           </div>

@@ -216,7 +216,7 @@ class Introduction extends React.Component {
             {cube(ReduxLogo, "react")}
             {cube(GimpLogo, "gimp")}
             {cube(NodeLogo, "node")}
-            {cube(MongoLogo, "mongodb")}
+            {cube(MongoLogo, "node")}
             {cube(GitLogo, "git")}
           </div>
         </section>

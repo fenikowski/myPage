@@ -4,6 +4,8 @@ import Browsers from "./img/browsers.png";
 export default {
   es: {
     headers: {
+      skillsh1: "Habilidades",
+      skillsh2: "Lo que uso en mi codigo",
       gamesh1: `Juegos`,
       gamesh2: `¡Haz clic para despertar el fuego!`,
       contacth1: "Contact",
@@ -19,7 +21,7 @@ export default {
       text: `¡Hola, bienvenidos a mi página! Soy Igor Fenikowski, un estudiante
   recién graduado de la Universidad de Varsovia. Me dedico a creación de
   aplicaciones de web usando las tecnologías nuevas y frameworks
-  populares. En está página encontrarás informaciones sobre mi, mis
+  populares. En esta página encontrarás informaciones sobre mi, mis
   habilidades y juegos, así mismo podrás ponerte en contacto conmigo y revisar
   mi código. Me alegra que decidste echar una vista aquí. `,
       technologies:
@@ -35,21 +37,24 @@ export default {
         description: `Gimp es mi herramienta de edición gráfica preferida. La uso para enfrentar los obstaculos sencillos en trabajo de cada front-end developer, dicho, editar imagenes y crear animaciones de sitios web y juegos.`
       },
       {
-        description: `Mi trabajo en JavaScript complemento con el framework muy al tanto de producción de Facebook. Gracias a él, surgió esta página, su codigo puedes revisar en mi cuenta de GitHub o pulsando `,
+        description: `Mi trabajo en JavaScript complemento con el framework muy al tanto de producción de Facebook - React. Compaginandolo con React Native y Redux creo proyectos para varios dispositivos. Gracias a él (y React Router), surgió esta página, su codigo puedes revisar en mi cuenta de GitHub o pulsando `,
         linkName: "aquí"
       },
       {
         description: `En mi trabajo utilizo Git, el sístema de control de versión más popular del mundo. Todo el codigo que cometos, de esta página así mismo como los juegos y proyectos encontrarás en mi cuenta de GitHub, pulsando `,
         linkName: "aquí"
+      },
+      {
+        description: `En el lado de server de mis aplicaciones, aprovecho de las tecnologias más ardientes en el mercado, o sea, versión back-end del JavaScript - Node JS. Juntos con Express y mongoDB database, resultan ser una combinación muy poderosa.`
       }
     ],
     games: [
       {
-        h3: `Este juegón, es un clásico, todo el mundo conoce las historias de
+        h3: `Es un clásico, todo el mundo conoce las historias de
                 Mario, ¿pero si conoce de la misma manera las batallas por
                 galletas, de una patata valiente?`,
-        p: `Creo que no hay mejor manera de aprender que praticar y por tanto
-                no puede exisitir una manera mejor de aprender programación que
+        p: `No hay mejor manera de aprender que praticar y por tanto
+                no existe una manera mejor de aprender programación que
                 escribir juegos. Así surgió el tercer juego del universo de la
                 Patata, que la mete en el mundo de dos dimensiones, donde
                 tiene que luchar para llenar su estómago de galletas deliciosas.
@@ -126,11 +131,15 @@ export default {
       message: "contenido del mensaje",
       button: "envía mensaje",
       clipboard: "copiar a portapapeles",
-      copied: "¡copiado!"
+      copied: "¡copiado!",
+      cvEnglish: "descarga mi CV en inglés",
+      cvSpanish: "descarga mi CV en español"
     }
   },
   en: {
     headers: {
+      skillsh1: "Skills",
+      skillsh2: "what i use in my code",
       gamesh1: `Games`,
       gamesh2: `Click to awake the fire!`,
       contacth1: "Contact",
@@ -157,12 +166,15 @@ export default {
         description: `Gimp is my prefered graphic editor, which helps my embrace simple tasks confronting every Front-end developer. I use to create images and animations for my websites and games alike.`
       },
       {
-        description: `My JavaScript written projects I complement with modern, up-to-date framework from Facebook production. Basing on it, surged this page, its code is avaiable to check out on my GitHub account `,
+        description: `My JavaScript written projects I complement with modern, up-to-date framework from Facebook's production - React. Hand to hand with React Native and Redux they let me code multiplatform projects. Basing on React (and React Router), surged this page, its code is avaiable to check out on my GitHub account `,
         linkName: "here"
       },
       {
         description: `In my work I use Git, the most popular verison control system. All the code I commit, of this page as well as the games and projects, you'll find en my GitHub account, clicking `,
         linkName: "here"
+      },
+      {
+        description: `On the server side of my aplication I take advantage of the hottest technologies currently on the market, back-end version of JavaScript - Node JS. Together with Express and mongoDB database they result to be a powerfull combo.`
       }
     ],
     games: [
@@ -222,7 +234,9 @@ export default {
       message: "message content",
       button: "send message",
       clipboard: "copy to clipboard",
-      copied: "copied!"
+      copied: "copied!",
+      cvEnglish: "download my CV in english",
+      cvSpanish: "download my CV in spanish"
     }
   }
 };

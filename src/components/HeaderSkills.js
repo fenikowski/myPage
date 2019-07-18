@@ -12,6 +12,7 @@ import MongoLogo from "../img/MongoLogo.png";
 import CSSLogo from "../img/CSSLogo.png";
 import HTMLLogo from "../img/HTMLLogo.png";
 import "../styles/abilities-header.css";
+import Data from "../text";
 
 class HeaderProjects extends React.Component {
   state = {
@@ -86,7 +87,7 @@ class HeaderProjects extends React.Component {
         img: MongoLogo,
         scroll: () => {
           window.scrollTo({
-            top: document.querySelector("div.skill.mongodb").offsetTop,
+            top: document.querySelector("div.skill.node").offsetTop,
             behavior: "smooth"
           });
         }
@@ -103,9 +104,9 @@ class HeaderProjects extends React.Component {
     document.querySelector("nav.main-navigation div.shadow").style.boxShadow =
       "none";
     // document.querySelector("h1.name").style.position = "fixed";
-    document.querySelector("h1.name").style.zIndex = -1;
+    document.querySelector("h1.name").style.zIndex = 6;
     // document.querySelector("h2.specialty").style.position = "fixed";
-    document.querySelector("h2.specialty").style.zIndex = -3;
+    document.querySelector("h2.specialty").style.zIndex = 4;
 
     this.createBall();
   }
@@ -139,7 +140,12 @@ class HeaderProjects extends React.Component {
     })`;
 
     // action randomazing
-    ballStage.addEventListener("click", this.state.bgcImages[randomImg].scroll);
+    ballStage.addEventListener("click", () =>
+      ballStage.addEventListener(
+        "click",
+        this.state.bgcImages[randomImg].scroll
+      )
+    );
 
     //z-index randomizing
     const zIndexRandom = Math.floor(Math.random() * 3);
@@ -148,10 +154,10 @@ class HeaderProjects extends React.Component {
         ballStage.style.zIndex = 0;
         break;
       case 1:
-        ballStage.style.zIndex = -2;
+        ballStage.style.zIndex = 5;
         break;
       case 2:
-        ballStage.style.zIndex = -4;
+        ballStage.style.zIndex = 7;
         break;
       default:
         break;
@@ -182,13 +188,19 @@ class HeaderProjects extends React.Component {
   }
 
   render() {
+    let titles = "";
+    if (this.props.language === "es") {
+      titles = Data.es.headers;
+    } else if (this.props.language === "en") {
+      titles = Data.en.headers;
+    }
     return (
       <>
         <div className="background-abilities">
           <img src={this.state.backgroundImage} alt="" />
           <img src={this.state.trees} alt="" />
-          <h1 className="name skills">Skills</h1>
-          <h2 className="specialty skills">Sección en desarrollo</h2>
+          <h1 className="name skills">{titles.skillsh1}</h1>
+          <h2 className="specialty skills">{titles.skillsh2}</h2>
         </div>
       </>
     );
