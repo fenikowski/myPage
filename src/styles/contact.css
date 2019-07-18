@@ -1,3 +1,48 @@
+section.documents {
+  background-color: #111;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 40vh;
+  width: 100%;
+}
+
+section.documents a.cv {
+  display: flex;
+  flex-basis: 35%;
+  height: 60%;
+  box-shadow: 0px 0px 0px 1vh #222;
+  border-radius: 1px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+section.documents a.cv:hover,
+section.documents a.cv:active {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 1vh #111, 0px 0px 0px 2vh rgba(0, 255, 0, 0.3);
+}
+
+section.documents a.cv:focus {
+  outline: none;
+}
+
+section.documents a.cv i {
+  flex-basis: 30%;
+  text-align: center;
+  font-size: 6vw;
+  color: white;
+}
+
+section.documents a.cv p {
+  flex-basis: 70%;
+  text-align: center;
+  color: white;
+  font-size: 3.5vw;
+}
+
 section.contact {
   background-color: #111;
   padding-bottom: 30px;
@@ -143,6 +188,10 @@ section.contact {
 }
 
 @media (max-width: 1100px) and (orientation: portrait) {
+  section.documents {
+    height: 20vh;
+  }
+
   .contact .address {
     padding-left: 30px;
     flex-basis: 49%;
@@ -173,6 +222,14 @@ section.contact {
 }
 
 @media (max-width: 420px) and (orientation: portrait) {
+  section.documents {
+    height: 15vh;
+  }
+
+  section.documents a.cv {
+    height: 45%;
+  }
+
   section.contact {
     background-color: #111;
     padding-bottom: 30px;
@@ -216,6 +273,14 @@ section.contact {
 }
 
 @media (max-width: 1200px) and (orientation: landscape) {
+  section.documents {
+    height: 30vh;
+  }
+
+  section.documents a.cv {
+    height: 50%;
+  }
+
   .contact div.address .address-box {
     width: 70%;
     height: 60px;
@@ -237,6 +302,14 @@ section.contact {
 }
 
 @media (max-width: 900px) and (orientation: landscape) {
+  section.documents {
+    height: 30vh;
+  }
+
+  section.documents a.cv {
+    height: 60%;
+  }
+
   .contact div.address .address-box {
     width: 90%;
     height: 60px;

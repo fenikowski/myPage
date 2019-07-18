@@ -6,6 +6,8 @@ import Facebook from "../img/contact3.png";
 import LinkedIn from "../img/contact5.png";
 import "../styles/contact.css";
 import Data from "../text";
+import CVspanish from "../Downloads/Igor Fenikowski CV es.pdf";
+import CVenglish from "../Downloads/Igor Fenikowski CV en.pdf";
 
 class Contact extends React.Component {
   state = {
@@ -111,83 +113,95 @@ class Contact extends React.Component {
       text = Data.en.contact;
     }
     return (
-      <section className="contact">
-        <div className="form">
-          <input
-            type="text"
-            id="userName"
-            placeholder={text.name}
-            value={this.state.userName}
-            onChange={this.handleInput}
-            data-
-          />
-          <input
-            type="text"
-            id="email"
-            placeholder={text.email}
-            value={this.state.email}
-            onChange={this.handleInput}
-          />
-          <textarea
-            type="textarea"
-            id="message"
-            placeholder={text.message}
-            value={this.state.message}
-            onChange={this.handleInput}
-          />
-          <button onClick={this.handleClick}>{text.button}</button>
-        </div>
-        <div className="address">
-          <div
-            className="address-box tooltip"
-            onClick={this.handleAddressClick.bind(
-              this,
-              "div.address-box:nth-of-type(1) input"
-            )}
-            onMouseOut={this.handleMouseOut}
-          >
-            <span className="tooltiptext" id="myTooltip">
-              {text.clipboard}
-            </span>
-            <img src={Mail} alt="" />
-            <p>fenikowski@gmail.com</p>
-            <input type="text" defaultValue="fenikowski@gmail.com" />
+      <>
+        <section className="documents">
+          <a href={CVenglish} className="cv" download>
+            <i className="fas fa-file-download" />
+            <p>{text.cvEnglish}</p>
+          </a>
+          <a href={CVspanish} className="cv" download>
+            <i className="fas fa-file-download" />
+            <p>{text.cvSpanish}</p>
+          </a>
+        </section>
+        <section className="contact">
+          <div className="form">
+            <input
+              type="text"
+              id="userName"
+              placeholder={text.name}
+              value={this.state.userName}
+              onChange={this.handleInput}
+              data-
+            />
+            <input
+              type="text"
+              id="email"
+              placeholder={text.email}
+              value={this.state.email}
+              onChange={this.handleInput}
+            />
+            <textarea
+              type="textarea"
+              id="message"
+              placeholder={text.message}
+              value={this.state.message}
+              onChange={this.handleInput}
+            />
+            <button onClick={this.handleClick}>{text.button}</button>
           </div>
-          <div
-            className="address-box tooltip"
-            onClick={this.handleAddressClick.bind(
-              this,
-              "div.address-box:nth-of-type(2) input"
-            )}
-            onMouseOut={this.handleMouseOut}
-          >
-            <span className="tooltiptext" id="myTooltip2">
-              {text.clipboard}
-            </span>
-            <img src={Phone} alt="" />
-            <p>+48 510 046 987</p>
-            <input type="text" defaultValue="+48 510 046 987" />
+          <div className="address">
+            <div
+              className="address-box tooltip"
+              onClick={this.handleAddressClick.bind(
+                this,
+                "div.address-box:nth-of-type(1) input"
+              )}
+              onMouseOut={this.handleMouseOut}
+            >
+              <span className="tooltiptext" id="myTooltip">
+                {text.clipboard}
+              </span>
+              <img src={Mail} alt="" />
+              <p>fenikowski@gmail.com</p>
+              <input type="text" defaultValue="fenikowski@gmail.com" />
+            </div>
+            <div
+              className="address-box tooltip"
+              onClick={this.handleAddressClick.bind(
+                this,
+                "div.address-box:nth-of-type(2) input"
+              )}
+              onMouseOut={this.handleMouseOut}
+            >
+              <span className="tooltiptext" id="myTooltip2">
+                {text.clipboard}
+              </span>
+              <img src={Phone} alt="" />
+              <p>+48 510 046 987</p>
+              <input type="text" defaultValue="+48 510 046 987" />
+            </div>
+            <a href="https://github.com/fenikowski" className="address-box">
+              <img src={GitHub} className="github-contact" alt="" />
+              <p>/fenikowski</p>
+            </a>
+            <a
+              href="https://www.facebook.com/igor.fenikowski"
+              className="address-box"
+            >
+              <img src={Facebook} alt="" />
+              <p>/igor.fenikowski</p>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/fenikowski/"
+              className="address-box"
+            >
+              <img src={LinkedIn} alt="" />
+              <p>/in/fenikowski</p>
+            </a>
           </div>
-          <a href="https://github.com/fenikowski" className="address-box">
-            <img src={GitHub} className="github-contact" alt="" />
-            <p>/fenikowski</p>
-          </a>
-          <a
-            href="https://www.facebook.com/igor.fenikowski"
-            className="address-box"
-          >
-            <img src={Facebook} alt="" />
-            <p>/igor.fenikowski</p>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/fenikowski/"
-            className="address-box"
-          >
-            <img src={LinkedIn} alt="" />
-            <p>/in/fenikowski</p>
-          </a>
-        </div>
-      </section>
+        </section>
+      </>
     );
   }
 }
