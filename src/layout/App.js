@@ -19,17 +19,40 @@ class App extends React.Component {
 
   componentDidMount() {
     this.mobilecheck();
+    this.languageCheck();
   }
 
   handleClickEnglish = () => {
+    window.sessionStorage.setItem("language", "en");
     this.setState({
       language: "en"
     });
   };
   handleClickSpanish = () => {
+    window.sessionStorage.setItem("language", "es");
     this.setState({
       language: "es"
     });
+  };
+
+  languageCheck = () => {
+    switch (window.sessionStorage.getItem("language")) {
+      case "es":
+        this.setState({
+          language: "es"
+        });
+        break;
+      case "en":
+        this.setState({
+          language: "en"
+        });
+        break;
+      default:
+        this.setState({
+          language: "es"
+        });
+        break;
+    }
   };
 
   mobilecheck = () => {
