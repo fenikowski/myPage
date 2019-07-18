@@ -12,10 +12,10 @@ section.introduction {
 
 div.profile-photo {
   position: absolute;
-  top: 20%;
+  top: 23%;
   left: 11%;
-  height: 60vh;
-  width: 60vh;
+  height: 55vh;
+  width: 55vh;
   box-shadow: 0 0 0 1vh white, 0 0 0 2vh rgba(0, 255, 0, 0.3);
   border-radius: 30vh;
   background-image: url(../img/20190130_225004.jpg);
