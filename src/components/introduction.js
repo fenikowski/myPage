@@ -22,6 +22,15 @@ class Introduction extends React.Component {
   };
 
   componentDidMount() {
+    let text = "";
+    if (this.props.language === "es") {
+      text = Data.es.introduction.text;
+    } else if (this.props.language === "en") {
+      text = Data.en.introduction.text;
+    }
+
+    this.setState({ text });
+
     window.addEventListener("scroll", this.handleScroll);
   }
 
@@ -30,23 +39,27 @@ class Introduction extends React.Component {
   };
 
   addLetter = () => {
-    let text = "";
-    if (this.props.language === "es") {
-      text = Data.es.introduction.text;
-    } else if (this.props.language === "en") {
-      text = Data.en.introduction.text;
-    }
-
-    if (this.state.activeLetter < text.length) {
+    if (this.state.activeLetter < this.state.text.length) {
       if (this.state.activeLetter >= 0) {
         this.setState(prevState => ({
-          passedText: prevState.passedText + text[prevState.activeLetter]
+          passedText:
+            prevState.passedText + this.state.text[prevState.activeLetter]
         }));
+        document.querySelector(
+          "section.introduction div.description p"
+        ).textContent = this.state.passedText;
       }
       this.setState(prevState => ({
         activeLetter: prevState.activeLetter + 1
       }));
 
+      // ends the method when all the letters passed
+      if (this.state.text.length === this.state.activeLetter) return;
+
+      // prevents doble launching
+      if (window.scrollY < 100) return;
+
+      // sets interval
       setTimeout(this.addLetter, 15);
     }
   };
@@ -56,7 +69,8 @@ class Introduction extends React.Component {
       window.scrollY + window.innerHeight >
         document.querySelector("section.introduction").offsetTop +
           document.querySelector("section.introduction").offsetHeight / 2 &&
-      this.state.photoClass === ""
+      this.state.photoClass === "" &&
+      this.state.passedText === ""
     ) {
       this.addLetter();
       this.setState({
@@ -69,6 +83,9 @@ class Introduction extends React.Component {
         .querySelectorAll("div.border div")
         .forEach(div => div.classList.add("active"));
     } else if (window.scrollY < 100) {
+      document.querySelector(
+        "section.introduction div.description p"
+      ).textContent = "";
       this.setState({
         activeLetter: -15,
         photoClass: "",
@@ -195,10 +212,8 @@ class Introduction extends React.Component {
           {border}
           <div className={`profile-photo ${this.state.photoClass}`} />
           <div className="description">
-            <p>
-              {this.state.passedText}
-              <span className={`cursor ${this.state.cursorClass}`}>|</span>
-            </p>
+            <p />
+            <span className={`cursor ${this.state.cursorClass}`}>|</span>
           </div>
         </section>
         <div className="section-title">

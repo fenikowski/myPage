@@ -140,12 +140,11 @@ class HeaderProjects extends React.Component {
     })`;
 
     // action randomazing
-    ballStage.addEventListener("click", () =>
-      ballStage.addEventListener(
-        "click",
-        this.state.bgcImages[randomImg].scroll
-      )
-    );
+    ballStage.addEventListener("click", () => {
+      if (this.state.bgcImages[randomImg].scroll) {
+        this.state.bgcImages[randomImg].scroll();
+      }
+    });
 
     //z-index randomizing
     const zIndexRandom = Math.floor(Math.random() * 3);

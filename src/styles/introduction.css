@@ -52,7 +52,12 @@ div.description {
   line-height: 1.4;
 }
 
+section.introduction div.description p {
+  display: inline;
+}
+
 span.cursor {
+  display: inline;
   opacity: 0;
   animation: cursorAnimation 0.8s infinite linear;
 }
