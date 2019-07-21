@@ -4,6 +4,7 @@ import Introduction from "../components/introduction.js";
 import Juegos from "../components/juegos.js";
 import Contact from "../components/contact";
 import Skills from "../components/skills";
+import Error from "../components/error";
 
 const Page = props => {
   return (
@@ -26,7 +27,7 @@ const Page = props => {
           path="/contact"
           render={() => <Contact language={props.language} />}
         />
-        <Route render={() => <p>Error 404</p>} />
+        <Route render={() => <Error language={props.language} />} />
       </Switch>
     </div>
   );

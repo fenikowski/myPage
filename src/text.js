@@ -134,6 +134,10 @@ export default {
       copied: "¡copiado!",
       cvEnglish: "descarga mi CV en inglés",
       cvSpanish: "descarga mi CV en español"
+    },
+    error: {
+      first: `Página no existe`,
+      second: "volver al inicio"
     }
   },
   en: {
@@ -237,6 +241,10 @@ export default {
       copied: "copied!",
       cvEnglish: "download my CV in english",
       cvSpanish: "download my CV in spanish"
+    },
+    error: {
+      first: `Page doesn't exist`,
+      second: "go back to the main site"
     }
   }
 };
