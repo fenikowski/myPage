@@ -121,6 +121,9 @@ export default {
     ],
     footer: {
       author: "creado en React por ",
+      design: "diseñado por",
+      code: "revisa el código",
+      link: "aquí",
       localization: "estás en ",
       up: "volver hacia arriba ",
       main: "inicio"
@@ -174,7 +177,7 @@ export default {
         linkName: "here"
       },
       {
-        description: `In my work I use Git, the most popular verison control system. All the code I commit, of this page as well as the games and projects, you'll find en my GitHub account, clicking `,
+        description: `In my work I use Git, the most popular verison control system. All the code I commit, of this page as well as the games and projects, you'll find on my GitHub account, clicking `,
         linkName: "here"
       },
       {
@@ -228,6 +231,9 @@ export default {
     ],
     footer: {
       author: "created in React by ",
+      design: "designed by",
+      code: "check out the code",
+      link: "here",
       localization: "you're in ",
       up: "go back to the top",
       main: "start"

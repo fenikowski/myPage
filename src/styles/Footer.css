@@ -4,7 +4,7 @@ div.footer {
   flex-direction: row;
   width: 100%;
   height: 10vh;
-  background-color: #222;
+  background-color: #000;
   text-align: center;
   line-height: 10vh;
   font-family: "Barlow Condensed";
@@ -18,6 +18,7 @@ div.footer div {
   flex-basis: 33.3%;
   flex-grow: 1;
   position: relative;
+  background-color: #222;
 }
 
 div.footer div span {
@@ -66,6 +67,87 @@ div.footer div.go-up button:focus {
   outline: none;
 }
 
+div.author.scene {
+  flex-basis: 33.3%;
+  perspective: 20vh;
+  border: none;
+  background-color: #000;
+}
+
+div.author.scene:hover {
+  cursor: default;
+}
+
+div.author .box {
+  width: 100%;
+  height: 10vh;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: translateZ(-10vh);
+  transition: transform 1s;
+}
+
+div.author .box.show-front {
+  transform: translateZ(-10vh);
+}
+div.author .box.show-back {
+  transform: translateZ(-10vh) rotateX(-180deg);
+}
+div.author .box.show-top {
+  transform: translateZ(-10vh) rotateX(-90deg);
+}
+div.author .box.show-bottom {
+  transform: translateZ(-10vh) rotateX(90deg);
+}
+
+div.author .box__face {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  background-color: #222;
+  overflow: hidden;
+}
+
+div.author .box__face--front,
+div.author .box__face--back {
+  width: 100%;
+  height: 10vh;
+  line-height: 10vh;
+}
+
+div.author .box__face--top,
+div.author .box__face--bottom {
+  width: 100%;
+  height: 10vh;
+  top: 5vh;
+  line-height: 10vh;
+}
+
+div.author .box__face--bottom {
+  top: -5vh;
+}
+
+div.author .box__face--back {
+  transform: rotate(180deg);
+}
+
+div.author .box__face--front {
+  transform: rotateY(0deg) translateZ(5vh);
+}
+div.author .box__face--back {
+  transform: rotateY(180deg) translateZ(5vh) rotate(180deg);
+}
+div.author .box__face--top {
+  transform: rotateX(90deg) translateZ(10vh);
+}
+div.author .box__face--bottom {
+  transform: rotateX(-90deg) translateZ(10vh);
+}
+
+div.author a {
+  color: lime;
+}
+
 @keyframes btndown {
   0% {
     top: 100%;
@@ -76,48 +158,32 @@ div.footer div.go-up button:focus {
   }
 }
 
-@media (max-width: 900px) and (orientation: portrait) {
-  div.footer {
-    height: 10vh;
-    text-align: center;
-    line-height: 10vh;
-    z-index: 20;
-  }
-
-  div.footer div {
-    flex-basis: 30%;
-    flex-grow: 1;
-    position: relative;
-  }
-
-  div.footer div:nth-child(1) {
+@media (max-width: 1400px) and (orientation: portrait) {
+  div.footer div.localization {
     display: none;
   }
-  div.footer div:nth-child(2) {
-    flex-basis: 80%;
-    padding-left: 10px;
-  }
-  div.footer div:nth-child(3) {
-    font-size: 0px;
-    flex-basis: 20%;
-  }
+}
 
-  div.footer div span {
-    font-weight: 600;
+@media (max-width: 900px) and (orientation: portrait) {
+  div.footer div.author {
+    flex-basis: 40%;
   }
-
   div.footer div button {
-    width: 40px;
-    height: 40px;
-    border-radius: 40px;
-    left: 10%;
-    top: 20%;
+    left: 80%;
   }
+}
 
-  div.footer div button i {
-    top: -80%;
+@media (max-width: 500px) and (orientation: portrait) {
+  div.footer div.author {
+    flex-basis: 75%;
+  }
+  div.footer div.go-up {
+    flex-basis: 25%;
+    font-size: 0;
+  }
+  div.footer div button {
     left: 50%;
-    font-size: 35px;
+    transform: translate(-50%, 0);
   }
 }
 
