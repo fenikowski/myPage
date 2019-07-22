@@ -1,10 +1,8 @@
 section.skills {
-  min-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   background-color: #000;
-  /* padding-top: 10vh; */
 }
 
 div.skill {
@@ -14,10 +12,12 @@ div.skill {
 }
 
 div.skill-header {
-  flex-basis: 20%;
+  flex-basis: 25%;
   flex-grow: 0;
   display: flex;
+  flex-direction: row;
   position: relative;
+  justify-content: left;
   align-items: center;
   background-color: #000;
 }
@@ -139,16 +139,23 @@ div.skill:nth-of-type(6) div.skill-header div.skill-gradient {
   );
 }
 
-div.skill-header img {
+div.skill-header div.skill-image {
+  display: block;
   margin: 0 40px 0 20px;
-  height: 70%;
+  height: 8vh;
+  width: 8vh;
+  background-size: contain;
   box-shadow: 0px 0px 5px 1px black;
   z-index: 1;
+  flex-grow: 0;
 }
 
 div.skill-header p {
+  display: block;
+  flex-grow: 0;
   font-size: 6.75vh;
   font-weight: 900;
+  line-height: 10vh;
   color: white;
   text-shadow: 2px 2px 2px lightgray;
   text-transform: uppercase;
@@ -156,8 +163,17 @@ div.skill-header p {
   z-index: 1;
 }
 
+@keyframes skill-open {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
 div.skill-content {
-  flex-basis: 80%;
+  flex-basis: 75%;
   display: flex;
   position: relative;
   background-color: #111;
@@ -166,9 +182,8 @@ div.skill-content {
 
 div.skill-content img {
   position: relative;
-  flex-basis: 35%;
-  width: 35%;
-  height: 100%;
+  width: 35vw;
+  height: 40vh;
 }
 
 div.skill-content::after {
@@ -176,8 +191,8 @@ div.skill-content::after {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 35%;
+  height: 40vh;
+  width: 35vw;
   background-image: linear-gradient(to left, #111, rgba(17, 17, 17, 0));
   z-index: 100;
 }
@@ -185,6 +200,7 @@ div.skill-content::after {
 div.skill-description {
   flex-grow: 1;
   text-align: center;
+  width: 65vw;
 }
 
 div.skill-description p {
@@ -216,9 +232,8 @@ div.skill-description p {
     align-items: center;
   }
 
-  div.skill-header img {
+  div.skill-header div.skill-image {
     margin: 0 40px 0 20px;
-    height: 70%;
     box-shadow: 0px 0px 5px 1px black;
   }
 
@@ -231,11 +246,20 @@ div.skill-description p {
     letter-spacing: 2px;
   }
 
+  @keyframes skill-open {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 200%;
+    }
+  }
+
   div.skill-content img {
     position: relative;
     flex-basis: 35%;
     width: 100%;
-    height: 50%;
+    height: 40vh;
   }
 
   div.skill-content::after {
@@ -243,7 +267,7 @@ div.skill-description p {
     position: absolute;
     top: 0;
     left: 0;
-    height: 50%;
+    height: 40vh;
     width: 100%;
     background-image: linear-gradient(to top, #111, rgba(17, 17, 17, 0));
     z-index: 100;
@@ -270,6 +294,13 @@ div.skill-description p {
 @media (max-width: 420px) and (orientation: portrait) {
   div.skill-description p {
     font-size: 26px;
+  }
+  div.skill-description p {
+    top: 0;
+    left: 0;
+    transform: none;
+    padding: 5vh 10vw 0;
+    width: 100vw;
   }
 }
 @media (max-width: 400px) and (orientation: portrait) {

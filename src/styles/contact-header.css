@@ -157,7 +157,7 @@ div.background-contact img {
   }
 }
 
-@media (max-width: 600px) and (orientation: landscape) {
+@media (max-width: 640px) and (orientation: landscape) {
   h1.name.contact {
     font-size: 45px;
     transform: translate(0vw, 0vh);

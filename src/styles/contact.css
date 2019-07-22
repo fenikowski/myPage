@@ -101,7 +101,7 @@ section.contact {
   width: 50%;
   height: 50px;
   color: white;
-  margin: 5% 10%;
+  margin: 3% 10% 5%;
   transform: translate(200%, 0%);
   transition: 1s;
 }
@@ -117,13 +117,12 @@ section.contact {
   line-height: 60px;
   padding-left: 30px;
   font-family: "Barlow Condensed";
-  font-size: 24px;
+  font-size: 3.25vh;
   margin-top: 5px;
 }
 
 .contact div.address .address-box img {
-  width: 36px;
-  border-radius: 36px;
+  border-radius: 30px;
   margin: 7px 0;
   float: left;
   transition: 0.2s;
@@ -160,7 +159,7 @@ section.contact {
   padding: 5px 10px 5px 10px;
   position: absolute;
   z-index: 5;
-  bottom: 90%;
+  bottom: 75%;
   left: 50%;
   margin-left: -75px;
   opacity: 0;

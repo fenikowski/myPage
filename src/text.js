@@ -189,7 +189,7 @@ export default {
           one: `The game is based on object programming in JavaScript
                     (ES6)`,
           two: `Current version works only in Chrome for desktops`,
-          three: `This game is written by me (Igor Fenikowski), although it contains images and sounds of open source licence. The use may not be commercial, but free for any personal use.`,
+          three: `This game is written by me (Igor Fenikowski), although it contains images and sounds of open source licence. The use may not be commercial, but free for any personal purposes.`,
           image: ChromeLogo
         },
         links: {
@@ -203,7 +203,7 @@ export default {
         description: {
           one: `The game was written in pure JavaScript (ES6)`,
           two: ` Current version works in all the popular browsers and mobiles.`,
-          three: `This game is written by me (Igor Fenikowski), although it contains images and sounds of open source licence. The use may not be commercial, but free for any personal use.`,
+          three: `This game is written by me (Igor Fenikowski), although it contains images and sounds of open source licence. The use may not be commercial, but free for any personal purposes.`,
           image: Browsers
         },
         links: {
@@ -217,7 +217,7 @@ export default {
         description: {
           one: `The game was written in pure JavaScript (ES6)`,
           two: `Current version works in all the popular browsers (without mobiles).`,
-          three: `This game is written by me (Igor Fenikowski), although it contains images and sounds of open source licence. The use may not be commercial, but free for any personal use.`,
+          three: `This game is written by me (Igor Fenikowski), although it contains images and sounds of open source licence. The use may not be commercial, but free for any personal purposes.`,
           image: Browsers
         },
         links: {

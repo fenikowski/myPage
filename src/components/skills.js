@@ -43,7 +43,7 @@ class Skills extends React.Component {
         window.scrollY + window.innerHeight >
         div.offsetTop + div.clientHeight
       ) {
-        div.firstElementChild.style.animation = "skill-open 0.5s forwards";
+        div.firstElementChild.style.animation = "skill-open 0.5s 0.1s forwards";
       } else if (window.scrollY + window.innerHeight < div.offsetTop) {
         div.firstElementChild.style.animation = "none";
       }
@@ -63,7 +63,11 @@ class Skills extends React.Component {
         <div className="skill javascript">
           <div className="skill-header">
             <div className="skill-gradient" />
-            <img src={JavaScriptLogo} alt="logo javascript" />
+            <div
+              className="skill-image"
+              style={{ backgroundImage: `url(${JavaScriptLogo})` }}
+              alt="logo javascript"
+            />
             <p>JavaScript</p>
           </div>
           <div className="skill-content">
@@ -76,7 +80,11 @@ class Skills extends React.Component {
         <div className="skill gimp">
           <div className="skill-header">
             <div className="skill-gradient" />
-            <img src={GimpLogo} alt="logo gimp" />
+            <div
+              className="skill-image"
+              style={{ backgroundImage: `url(${GimpLogo})` }}
+              alt="logo gimp"
+            />
             <p>GIMP</p>
           </div>
           <div className="skill-content">
@@ -89,7 +97,11 @@ class Skills extends React.Component {
         <div className="skill react">
           <div className="skill-header">
             <div className="skill-gradient" />
-            <img src={ReactLogo} alt="logo react" />
+            <div
+              className="skill-image"
+              style={{ backgroundImage: `url(${ReactLogo})` }}
+              alt="logo react"
+            />
             <p>React</p>
           </div>
           <div className="skill-content">
@@ -108,7 +120,11 @@ class Skills extends React.Component {
         <div className="skill node">
           <div className="skill-header">
             <div className="skill-gradient" />
-            <img src={NodeLogo} alt="logo node" />
+            <div
+              className="skill-image"
+              style={{ backgroundImage: `url(${NodeLogo})` }}
+              alt="logo node"
+            />
             <p>Node Js</p>
           </div>
           <div className="skill-content">
@@ -140,7 +156,11 @@ class Skills extends React.Component {
         <div className="skill git">
           <div className="skill-header">
             <div className="skill-gradient" />
-            <img src={GitLogo} alt="logo git" />
+            <div
+              className="skill-image"
+              style={{ backgroundImage: `url(${GitLogo})` }}
+              alt="logo git"
+            />
             <p>Git</p>
           </div>
           <div className="skill-content">

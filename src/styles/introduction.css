@@ -376,12 +376,17 @@ section.about-me {
   div.profile-photo {
     top: 10%;
     left: 50%;
-    transform: translate(-50%, 0);
+    transform: translate(-50%, 0) rotateY(90deg);
     height: 600px;
     width: 600px;
     box-shadow: 0 0 0 12px white, 0 0 0 24px rgba(0, 255, 0, 0.3);
     border-radius: 300px;
     background-size: cover;
+  }
+
+  div.active-profile-photo {
+    transform: translate(-50%, 0) rotateY(0deg);
+    animation: profilePhotoAnimation 1s ease 1.1s 1;
   }
 
   div.description {
@@ -416,7 +421,6 @@ section.about-me {
     height: 120vh;
     width: 100%;
     background-color: #000;
-    /* border: 5px green solid; */
   }
 
   div.cube-holder {
@@ -435,12 +439,17 @@ section.about-me {
   div.profile-photo {
     top: 13%;
     left: 50%;
-    transform: translate(-50%, 0);
+    transform: translate(-50%, 0) rotateY(90deg);
     height: 400px;
     width: 400px;
     box-shadow: 0 0 0 12px white, 0 0 0 24px rgba(0, 255, 0, 0.3);
     border-radius: 200px;
     background-size: cover;
+  }
+
+  div.active-profile-photo {
+    transform: translate(-50%, 0) rotateY(0deg);
+    animation: profilePhotoAnimation 1s ease 1.1s 1;
   }
 
   div.description {
@@ -486,12 +495,17 @@ section.about-me {
   div.profile-photo {
     top: 13%;
     left: 50%;
-    transform: translate(-50%, 0);
+    transform: translate(-50%, 0) rotateY(90deg);
     height: 250px;
     width: 250px;
     box-shadow: 0 0 0 7px white, 0 0 0 14px rgba(0, 255, 0, 0.3);
     border-radius: 125px;
     background-size: cover;
+  }
+
+  div.active-profile-photo {
+    transform: translate(-50%, 0) rotateY(0deg);
+    animation: profilePhotoAnimation 1s ease 1.1s 1;
   }
 
   div.description {
@@ -619,7 +633,7 @@ section.about-me {
 
   section.introduction {
     position: relative;
-    height: 70vh;
+    height: 100vh;
     width: 100%;
   }
 
@@ -647,8 +661,16 @@ section.about-me {
   }
 
   section.map p {
-    font-size: 50px;
+    font-size: 40px;
     width: 80%;
+  }
+}
+
+@media (max-width: 1400px) and (min-height: 900px) and (orientation: landscape) {
+  section.introduction {
+    position: relative;
+    height: 70vh;
+    width: 100%;
   }
 }
 
