@@ -39,11 +39,17 @@ class Introduction extends React.Component {
   };
 
   addLetter = () => {
-    if (this.state.activeLetter < this.state.text.length) {
+    let text = "";
+    if (this.props.language === "es") {
+      text = Data.es.introduction.text;
+    } else if (this.props.language === "en") {
+      text = Data.en.introduction.text;
+    }
+
+    if (this.state.activeLetter < text.length) {
       if (this.state.activeLetter >= 0) {
         this.setState(prevState => ({
-          passedText:
-            prevState.passedText + this.state.text[prevState.activeLetter]
+          passedText: prevState.passedText + text[prevState.activeLetter]
         }));
         document.querySelector(
           "section.introduction div.description p"
@@ -54,7 +60,7 @@ class Introduction extends React.Component {
       }));
 
       // ends the method when all the letters passed
-      if (this.state.text.length === this.state.activeLetter) return;
+      if (text.length === this.state.activeLetter) return;
 
       // prevents doble launching
       if (window.scrollY < 100) return;
