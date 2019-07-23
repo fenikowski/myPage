@@ -28,6 +28,8 @@ class Skills extends React.Component {
   scrollChecking = scrollTo => {
     if (scrollTo === null) return;
 
+    window.scrollTo(0, 0);
+
     setTimeout(() => {
       window.scrollTo({
         top: document.querySelector(`div.skill.${scrollTo}`).offsetTop,

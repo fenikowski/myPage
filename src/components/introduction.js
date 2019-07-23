@@ -1,4 +1,5 @@
 import React from "react";
+import { Redirect } from "react-router";
 import "../styles/introduction.css";
 import Data from "../text";
 import JavaScriptLogo from "../img/javaScriptLogo.png";
@@ -51,9 +52,11 @@ class Introduction extends React.Component {
         this.setState(prevState => ({
           passedText: prevState.passedText + text[prevState.activeLetter]
         }));
-        document.querySelector(
-          "section.introduction div.description p"
-        ).textContent = this.state.passedText;
+        if (document.querySelector("section.introduction div.description p")) {
+          document.querySelector(
+            "section.introduction div.description p"
+          ).textContent = this.state.passedText;
+        }
       }
       this.setState(prevState => ({
         activeLetter: prevState.activeLetter + 1
@@ -175,7 +178,15 @@ class Introduction extends React.Component {
     document.querySelector("section.map p").classList.add("active");
   };
 
+  handleOnClick = () => {
+    this.setState({ redirect: true });
+  };
+
   render() {
+    if (this.state.redirect) {
+      return <Redirect push to="/skills" />;
+    }
+
     const cube = (logo, name) => (
       <div className="cube-holder">
         <div className="scene">
@@ -187,7 +198,7 @@ class Introduction extends React.Component {
                 onClick={() => {
                   if (name) {
                     sessionStorage.setItem("scrollTo", name);
-                    window.location = "/skills";
+                    this.handleOnClick();
                   }
                 }}
               />
