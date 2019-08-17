@@ -5,7 +5,7 @@ export default {
   es: {
     headers: {
       skillsh1: "Habilidades",
-      skillsh2: "Lo que uso en mi codigo",
+      skillsh2: "Lo que uso en mi código",
       gamesh1: `Juegos`,
       gamesh2: `¡Haz clic para despertar el fuego!`,
       contacth1: "Contact",
