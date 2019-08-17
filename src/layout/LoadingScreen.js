@@ -150,8 +150,15 @@ class LoadingScreen extends React.Component {
         }
       }
 
+      // flag is set to delay loading screen dissapearance by 2s
+      let flagForLoading = false;
+
+      setTimeout(() => {
+        flagForLoading = true;
+      }, 2000);
+
       const readyStateCheckInterval = setInterval(function() {
-        if (document.readyState === "complete") {
+        if (document.readyState === "complete" && flagForLoading === true) {
           clearInterval(readyStateCheckInterval);
           whenPageLoaded();
         }
