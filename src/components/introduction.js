@@ -10,7 +10,7 @@ import NativeLogo from "../img/NativeLogo.jpg";
 import GitLogo from "../img/GitLogo.png";
 import NodeLogo from "../img/NodeLogo.png";
 import MongoLogo from "../img/MongoLogo.png";
-import Map from "../img/map.png";
+import Map from "../img/map.PNG";
 
 class Introduction extends React.Component {
   state = {
